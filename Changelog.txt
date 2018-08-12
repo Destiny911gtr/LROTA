@@ -1,0 +1,262 @@
+=======================
+     08-12-2018
+=======================
+
+
+   * build/make/
+53391ba63 core: config: Use host ijar if requested
+25ded3f53 dex2oat: disable multithreading for WSL
+a2d379b12 Add detection for WSL
+3e9333098 Adapt ijar for WSL
+
+   * device/oneplus/oneplus3/
+a128f0e Add back Spectrum support and add new profiles
+a061ba0 Revert "Add Spectrum support"
+44755c0 Revert "Fix doze package name in device.mk"
+
+=======================
+     08-11-2018
+=======================
+
+
+   * hardware/lineage/interfaces/
+9bcc1bd Update makefiles from anywhere.
+
+=======================
+     08-10-2018
+=======================
+
+
+   * build/make/
+34e3a51bc build: Add vendor.prop capability
+75561af0d sign_target_files: also replace fingerprint in system/vendor/build.prop
+f62b5a2d6 core: Dont overwrite build.prop when TARGET_COPY_OUT_VENDOR=system
+
+   * device/oneplus/oneplus3/
+7a379f8 doze: Reappear again
+
+   * frameworks/av/
+e6bf87bd8 NdkMediaCodec: add AMediaCodec_getBufferFormat
+
+   * vendor/oneplus/
+66f3f49c sdm845-common: Update blobs to OxygenOS 5.1.9
+
+=======================
+     08-09-2018
+=======================
+
+
+   * device/oneplus/oneplus3/
+052451c Update defconfig
+
+   * frameworks/base/
+71d35fa22dd camera: Check if aux camera whitelist is set before restricting cameras
+4d05a4d4107 Camera: Longshot with Burst Functionality.
+98b7d49f686 Camera: Extend face detection
+d9e1c43f2c1 Fix Photosphere/Camera FCs
+934f82660e4 Camera: Expose Aux camera to apps present in the whitelist
+5a8119d950d Revert "Base: fix facelock crash when lock screen is disabled"
+6bff6b2a070 Revert "Camera: Expose Aux camera to apps present in the whitelist"
+b5c238d2be3 Revert "Camera: Force HAL1 for predefined package list."
+dd0b4be4b1a base: cleanup nav gestures code
+0642abd992e base: add long press home handling to nav gestures
+5db58ec4b5f base: Improve nav gestures
+
+   * packages/apps/Messaging/
+3686c41 Merge tag 'android-8.1.0_r43' into staging/lineage-15.1_merge-android-8.1.0_r43
+af0e887 Revert "Messaging: Request external storage permission before handling shared files"
+
+=======================
+     08-08-2018
+=======================
+
+
+   * build/make/
+565bb1f2e Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/build into oc-mr2
+
+   * frameworks/av/
+4f2fe6566 Merge tag 'android-8.1.0_r43' into oc-mr2
+
+   * frameworks/base/
+893bf4bd9a4 SystemUI: Enable corner padding
+0513b26a733 Merge tag 'android-8.1.0_r43' into oc-mr2
+
+   * frameworks/opt/telephony/
+bfa89faa9 Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/frameworks/opt/telephony into HEAD
+
+   * kernel/oneplus/msm8996/
+6b06726a1416 bump version
+e67153a5e6bb tcp: allow for bigger reordering level
+72a243f10bfe add CDG tcp algorithm
+6eb7b3a8d74b tcp: add CDG congestion control
+b0de65fe575c WLAN subsystem: Sysctl support for key TCP/IP parameters
+
+   * packages/apps/PackageInstaller/
+0a2b3935 Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/packages/apps/PackageInstaller into HEAD
+
+   * packages/apps/Settings/
+7a3ec0e91f Wired/BT headset: make ringtone audio focus customizable [2/2]
+
+   * packages/providers/DownloadProvider/
+aee8c12 Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/packages/providers/DownloadProvider into HEAD
+
+   * packages/services/Telephony/
+1d7b4ce6 Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/packages/services/Telephony into oc-mr2
+
+   * system/bt/
+415a2fb6 Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/system/bt into HEAD
+
+   * system/vold/
+5db0abe Merge tag 'android-8.1.0_r43' of https://android.googlesource.com/platform/system/vold into HEAD
+
+=======================
+     08-07-2018
+=======================
+
+
+   * frameworks/base/
+06bd0829c6e Wired/BT headset: make ringtone audio focus customizable [1/2]
+
+   * hardware/qcom/power/
+34c7410 power: Fix several typos in power profiles
+
+   * kernel/oneplus/msm8996/
+283769a9f7d4 Enable MEMCFG
+c2e4b2620c53 cpufreq_interactive: remove boost functionality
+e63fccdc23d2 cpufreq: Add latest impulse governor
+0c8741ae45b2 cpufreq: cultivation: bring in initial release
+1346f194f61b zen-tune: Implement zen-tune v4
+9c2572a80b0a comment out implicit method
+178e23045cf7 Edit Tripndroid. Not sure older values seem appropriate
+a79596ce1507 Improve stability
+a78e82c33199 Improve power consumption
+0bd816d12e2d Improve power consumption
+825f352b9908 SQUASH: Add Blu Active CPU Governor For Linux 3.4.y
+
+=======================
+     08-06-2018
+=======================
+
+
+   * hardware/qcom/fm/
+26b8136 Automatic translation import
+
+   * kernel/oneplus/msm8996/
+48fb23ab127a fixed compile error
+
+   * packages/apps/Camera2/
+0bc9ca1a6 Automatic translation import
+
+   * packages/apps/ExactCalculator/
+178b09e Automatic translation import
+
+   * packages/apps/Gallery2/
+127d42cf7 Automatic translation import
+
+   * packages/apps/Jelly/
+8401c7d Automatic translation import
+
+   * packages/apps/Messaging/
+f3b4387 Automatic translation import
+
+   * packages/apps/WallpaperPicker/
+add6c7b Automatic translation import
+
+=======================
+     08-05-2018
+=======================
+
+
+   * external/f2fs-tools/
+3aac42a fsck: Fix conflicts with libext2_quota
+e4ea681 fsck: Update libf2fs_fsck source file list
+2dcd2b0 Android.bp/mk: update strings to reflect v1.11.0 release
+
+   * frameworks/base/
+9ca421be564 SystemUI: QS: Fix qs tiles visibility
+
+   * kernel/oneplus/msm8996/
+a8c58a8182ff msm_thermal: increase user frequency mitigation control
+0adea9830515 thermal: work faster with more thrust
+193aa2d9e09e msm_thermal: add frequency range to control max requested frequency
+0b315457b55d msm_thermal: obey user's min frequency policy
+186b097dfd37 msm_thermal: enable early on boot
+c0c8a6a05ce9 thermal : intelli-Thermal v3.0
+b2a3c8e253da Revert "msm: thermal: Add sysfs nodes to control parameters"
+
+   * packages/apps/Dialer/
+9203fc81d Show proper call duration
+f0efc1b45 Control dialer's incoming call proximity sensor check via an overlay
+b45fb4dcb Dialer: hide single tab ViewPager
+e407ac5cb IMS: Make modifications in Dialer app to incorporate IMS related call types as well
+018bd1a84 Dialer: support sub and call-type filters for msim call log
+
+   * packages/apps/Settings/
+43c1cad917 settings: fuelgauge: add back battery level animation
+
+=======================
+     08-04-2018
+=======================
+
+
+   * packages/apps/Dialer/
+683a0dc9f IMS: Add support to display IMS related call logs
+dc7e00900 Dialer: add overlay config for human interaction check enablement
+
+   * packages/services/Telephony/
+9a93843d Use proper summary for network select list preference on dsds/dsda/tsts
+
+=======================
+     08-03-2018
+=======================
+
+
+   * bionic/
+3bad83562 libc: Mark libstdc++ as vendor available
+
+   * device/oppo/common/
+c0fba00 oppo: remove recovery updater
+
+   * frameworks/base/
+3cf3271b77a frameworks: Add an overlay to specify notch presence
+d9384ba64d4 Themes: SystemUI: expose screen pinning colors
+919e634e99f Themes: Expose power save mode color
+4399740445f Themes: Allow Navbar ripple color to be themed
+39358f9b593 Themes: Notifications: extend dynamic notification bool for ambient notifications
+41858dd93bd Themes: SystemUI: Expose QS background opacity
+4ee18a0eb24 Themes: SystemUI: Expose QS edit item decoration background color
+f6ada509ee6 Themes: Expose Keyguard affordance circle background
+6b5d1be6075 Themes: Expose Screenshot flash and background colors
+135fdf32684 Themes:  Expose Keyboard Shortcuts Dialog
+914c0b435dc Themes: SystemUI: Expose switch bar title
+c7b35252c2c SystemUI: Add Gaming mode tile
+
+   * kernel/oneplus/msm8996/
+f9b218b3e244 removed unused variable
+0d77e46e8eb7 scsi: ufs: call single_release to avoid memory leak
+cfc281ea97a9 kernel: Fix massive cpufreq stats memory leaks
+2685e959b097 comment un-used method
+7ceb14f05ca9 ANDROID: cpufreq: change uid_cpupower to use u32
+056940e5d498 ANDROID: cpufreq: Remove seq_printf from critical path
+7357af06ad15 ANDROID: cpufreq: uid_concurrent_policy_time
+58b43ba82849 ANDROID: cpufreq: uid_concurrent_active_time
+aa903f83468e ANDROID: cpufreq: concurrent_policy_time by pid
+9dedddbf9807 ANDROID: cpufreq: concurrent_active_time by pid
+142ebd0e51e8 ANDROID: cpufreq: stats: Fix dead stats clearing timing
+e937aa7a8465 f2fs: make gc_no_gc_sleep_time much more conservative
+ba9a5837aabc f2fs: set ioprio of GC kthread to idle
+c2171ed1fe8b msm-tsens: Reschedule work instead of causing uninterruptible sleep
+a0937ec9f15b thermal: tsens: Switch from usleep_range() to msleep
+f6eb3aad9f7d thread_info: enhance power efficiency
+0ddf9a07e1da usb: dwc3-msm: Remove indefinite wakeup
+f794309a8502 arm64: lib: memory utilities optimization
+16044ca61781 arm64: Implement optimised IP checksum helpers * AArch64 is capable of 128-bit memory accesses without alignment * restrictions, which makes it both possible and highly practical to slurp * up a typical 20-byte IP header in just 2 loads. Implement our own * version of ip_fast_checksum() to take advantage of that, resulting in * considerably fewer instructions and memory accesses than the generic * version. We can also get more optimal code generation for csum_fold() by * defining it a slightly different way round from the generic version, so * throw that into the mix too.
+
+   * packages/apps/LiquidLounge/
+35a6820 lounge: cleanup some title texts
+
+   * packages/apps/Settings/
+23433c3969 settings: cleanup screen stabilization text
+b23ca44f4a Themes: Settings: expose msim color picker text colors
+29b81f55e4 Themes: Settings: expose condition/suggestion colors for themes
+
