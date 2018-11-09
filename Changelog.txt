@@ -1,431 +1,307 @@
 =======================
-     10-26-2018
+     11-09-2018
 =======================
 
 
-   * device/oneplus/oneplus3/
-1cd1313 op3: Fix NFC
-
-=======================
-     10-25-2018
-=======================
-
-
-=======================
-     10-24-2018
-=======================
-
-
-=======================
-     10-23-2018
-=======================
-
+   * hardware/broadcom/libbt/
+f08b665 libbt: Make sure that we don't load pre-patch when looking for patch
 
    * vendor/oneplus/
-b434c8d sdm845-common: move WCNSS config to vendor
+c0eb52c op3: Update blobs from OOS 5.0.6
 
 =======================
-     10-22-2018
+     11-08-2018
 =======================
 
+   * art/
+cf12ba8 build: disable ART debugging
 
-   * build/soong/
-85f4287 soong: Add function to return camera parameters library name
-22e8fc0 Build: remove dotfiles on a make clean as well
-
-   * frameworks/av/
-e6b3abb audioflinger: Fix audio for WifiDisplay
-82d576b Explicitly initialise base class in copy constructor
-92699db OMXNodeInstance: Do not use already freed memory
-1f5ecc3 camera: Allow devices to load custom CameraParameter code
-e40264f Stagefright: Do not skip frames in time-lapse-source for high-speed
-78871ce Stagefright: Update start-time once input-time reaches expected start-time
-5c654b8 Stagefright: Allow setting high-framerates in CameraSource
-c8736a7 SoundTriggerHalLegacy.cpp: include errno.h
-446917e av: camera: Allow disabling shutter sound for specific packages [1/2]
-46a94bd libcameraservice: Disable external provider for legacy HAL1
-
-   * packages/apps/Settings/
-4e661a8 fuelgauge: Display Portrait styled battery
-
-   * vendor/liquid/
-005a84c Revert "vendor: Allow use of AOSP wlan hal on caf devices"
-
-=======================
-     10-21-2018
-=======================
-
+   * bionic/
+4aefc3f Merge tag 'android-9.0.0_r16' into pie
+3edf560 Revert "linker: Make platform text relocations denial optional"
+a667826 bionic: Use legacy pthread_mutex_init() behavior on pre-P API levels
 
    * build/make/
-4ef81fb build: fix dex pre opt build with ims
+6f2da9c Merge tag 'android-9.0.0_r16' into pie
+ce7276d dex2oat: disable multithreading for WSL
+4731e9f Add detection for WSL
+e4f0e20 core_base: Remove libnfc_ndef from PRODUCT_PACKAGES
+9f8b53c Add PRODUCT_USE_LOGICAL_PARTITIONS
+
+   * device/oneplus/oneplus3/
+ef724d3 op3: Restore some pre-P system properties naming
+37307ca op3: extend unprocessed audio
+1edcd96 op3: Update microphone characteristics.
+
+   * device/qcom/sepolicy/
+4a6635a sepolicy: Allow perf HAL to set freq props
+
+   * external/perfetto/
+7690fb4 Merge tag 'android-9.0.0_r16' into pie
 
    * frameworks/av/
-6cadef0 camera: Allow to use boottime as timestamp reference
+d51f0d2 Merge tag 'android-9.0.0_r16' into pie
 
-   * packages/apps/Launcher3/
-2ce19db launcher3: remove dup feed option and enable it by default
+   * frameworks/base/
+b5e286e Fixes crash when getting panel before setting components
+bfd85c4 SystemUI: don't add already attached qs tile views
+b085db2 Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * frameworks/native/
+bf9e871 Merge tag 'android-9.0.0_r16' into pie
+967cac4 Add vendor version for libgui
+
+   * frameworks/opt/net/ims/
+ce2acd4 Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * frameworks/opt/net/wifi/
+4ae5b24 Merge tag 'android-9.0.0_r16' into pie
+
+   * frameworks/opt/telephony/
+e7f873e Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * frameworks/support/
+df8fb68 Merge tag 'android-9.0.0_r16' into pie
+
+   * hardware/interfaces/
+932c147 Merge tag 'android-9.0.0_r16' into pie
+
+   * kernel/oneplus/msm8996/
+48a4f5d bump version
+
+   * packages/apps/Bluetooth/
+8ad1467 Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/Contacts/
+0fd5bb3 Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/DeskClock/
+cf73ae0 Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/Dialer/
+2f60259 res: Fix malformed XML
+ca425b6 Allow call recording for Bulgaria.
+82e080c Allow call recording for Belgium
+b286b38 Allow call recording for Austria
+
+   * packages/apps/PackageInstaller/
+447cd9d Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/PhoneCommon/
+1929e60 Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/Settings/
+d72cd0c Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/apps/SettingsIntelligence/
+16f2b67 Increase time limit of search task
+4c7df8c SettingsIntelligence: Regen database on build version change
+dd8cb86 SettingsIntelligence: Match Settings style
+beec45c SettingsIntelligence: fix search panel bg color for correct themeing
+
+   * packages/inputmethods/LatinIME/
+9e066e6 Merge tag 'android-9.0.0_r16' into pie
+f66dced LatinIME: sync and rebuild emojis
+6579883 LatinIME: Add shortcuts support
+f95be51 LatinIME: Disable Hungarian spell checking
+d0f6789 LatinIME: Add Luxembourgish keyboard & spellchecking dictionary
+
+   * packages/providers/DownloadProvider/
+fa189ce Merge tag 'android-9.0.0_r16' into pie
+
+   * packages/providers/MediaProvider/
+7d5ad93 Merge tag 'android-9.0.0_r16' into pie
+eecab7c MediaProvider: Add read storage permission
+
+   * packages/services/Telecomm/
+90b4137 Merge tag 'android-9.0.0_r16' into pie-ims
+34ade89 Telecomm: Make sensitive phone numbers not to be shown in call log history.
+
+   * packages/services/Telephony/
+3a2db9c Revert "Revert "Add support to launch call barring""
+0785887 Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * system/bt/
+8e2ed37 Merge tag 'android-9.0.0_r16' into pie
+6cdfd02 Fix "Disable Absolute Volume" Bluetooth developer option
+d95a212 Run the wakelock JNI callbacks on the JNI thread
+80b2c80 Fix out-of-bounds reading in btm_ble_vendor_capability_vsc_cmpl_cback
+
+   * system/core/
+49ed806 libion: save errno value
+8ab921a healthd: BatteryMonitor: Fix compiler warning
+
+   * system/sepolicy/
+5fe552a Merge tag 'android-9.0.0_r16' into pie
+d365227 Build sepolicy tools with Android.bp.
+c634f45 Fix issue that ro.telephony.default_network can't be read per slot
+c616b5d Add rules required for TARGET_HAS_LEGACY_CAMERA_HAL1
+68e9582 Allow to read events/header_page with debugfs_tracing
+00a4fcb sepolicy: New type sdcard_posix for labeled filesystems
+
+   * system/vold/
+cbc9853 Merge tag 'android-9.0.0_r16' into pie
+
+   * vendor/liquid/
+118a77b vendor: disable adb auth on userdebug builds
+3221ea0 sensitive_pn: General update + new Bulgarian phone numbers
+dfe53b9 kernel: Remove deprecated flag errors
+4e5cf44 kernel: Correct CROSS_COMPILE_ARM32 toolchain
+27f8e30 RJIO: Change Roaming protocal to IPV4V6.
+ad753d2 apns: update RJIO APNs
+0959ba8 overlay: Remove config_persistUsbDriveNotification
+ac4e333 apns: NOS: fix tethering and mms.
 
    * vendor/oneplus/
-600b133 sdm845-common: Update custom HWComposer
-eab152b sdm845-common: Add qti-telephony-common from tissot
+5459c93 sdm845-common: OOS 9.0.2 blobs
 
 =======================
-     10-20-2018
+     11-07-2018
 =======================
 
 
    * device/oneplus/oneplus3/
-1549101 Revert "op3: Disable ipacm for now"
-4ed9db7 Fix fingerprint not working on first try
-661edc9 init.qcom.rc: set proper read-ahead
-1065af0 Disable bluetooth on by default
-eac697f Interactive: Update settings for better performance
-629f11b op3: DeviceParts: Remove display panel prefs for now
-9d89d66 op3: Dont build doze and pocketmode as we have better alternatives
-e76c009 op3:Build Official
-123479c op3: Switch to @mady51's kernel
-3c1ebeb op3: light: mark as shutdown critical
-a7cdf1d op3: Advertise Vulkan 1.1 system feature
-a922926 op3: Update textclassifier package name for P
-b38c900 op3: Import backlight overlays from Marlin
-02b7d38 op3: Update ANT+ system blobs to P
-fbfdcac Set maple for some kernel love
-becf2f2 oneplus3: Configure msm-thermal-simple driver
-dfec1b3 oneplus3: Remove msm-thermal, thermal-engine, and bcl
-2884b01 ueventd: Don't modify permissions of /dev/hw_random
-73f6437 Remove verbose and debug for data-ipa-cfg-mgr
-1d45a12 Import data-ipa-cfg-mgr from CAF's LA.UM.7.5.r1-02200-8x96.0 tag
-4841879 Remove creation of /data/misc/wifi and /data/misc/dhcp
-a108f06 op3: Declare PRODUCT_SOONG_NAMESPACES for HALs
-ce1781c CarrierConfig: Add Megafon and Beeline config
-18ab36f Convert lights HAL into a native binderized HAL
-ff2911b configstore: uprev configstore (1.0 -> 1.1)
-6f18bbe op3: uprev manifest
-26602cd op3: Add health service
-8bf6a1b Lower the DPI to 421
-4f37bcc Revert "op3: Disable telephony-ext for now"
-2196467 op3: Switch to 1.1 power HAL
-bcb2ea2 msm8996: import device parts package
-ed73528 Revert "op3: Use AOSP wifi HAL"
-61cff9e op3: Non-VoLTE users deserve more freedom
-94793e3 Revert "op3: Use AOSP RIL for now"
-e876d94 Audio V4: Migrate pixel 1 to audio V4
-7f52708 op3: Add basic USB HAL that reports no status change
-5caf0e8 op3: Remove proximity check on wake as its useless now
-0de7261 op3: Pocketmode returns
-ac6854b op3: Update CPU performance settings
-233be0b oneplus3: Make the foreground/boost cpuset actually boost
-8b74f71 oneplus3: Enable framework sched boost
-1bdb147 oneplus3: Configure performance profiles
-be4f340 op3: Fix SUPL version
-a4929ec oneplus3: Add custom power HAL
-314e37d oneplus3: liblights: Calculate brightness ramp automatically on init
-7f77ec6 oneplus3: Tweak Interactive governor settings
-d623726 oneplus3: Configure CPU Input Boost driver
-addbf10 op3: AOD: Lower brightness
-acde4db Add missing touch optimization, set dpi to 420
-e048003 Add in bluetooth operating voltages
-e492401 BoardConfig: 2nd arch should target a53
-e0ebd56 nfc: use data/vendor dir
-0666b2b Revert "op3: Disable custom audio policy for now"
-f89c4a8 Revert "Remove soundtrigger for now"
-c66761b op3: Switch to Soundtrigger 2.1 implementation implementation
-c2ce6a4 op3: Health: Uprevision to 2.0
-3d5b339 op3: Increase Call Volume
-6450e2c op3: doze: Enable doze again
-af9a40a op3: overlay: Fingerprint notify on cancel to true
-eef9f28 op3: overlay: enable Dash charge support
-bd9e8ed Renamed config_dozeAfterScreenOff
-05e9a0d op3: overlay: Button brightness
-8e3d253 op3: overlay: Add HW button tweaking overlay
-d9f2503 op3: Enable smart battery
-e834de9 op3: overlays: add proximityCheckOnWake
-5760f66 op3: overlay: add flashlight Proximity Timeout
-ea81e6e op3: Use AOSP RIL for now
-344e3bc Add support for NFC 1.1
-a607e87 Rename libnfc-brcm.conf -> libnfc-nci.conf
-7f43432 Remove soundtrigger for now
-c64f25f Revert "op3: Use CAF bluetooth HAL"
-29e2cf3 op3: Remove rainbow recovery LED params
-cea5538 op3: init: create oemnvitems for RIL
-3691d03 op3: AOD
-177b4c2 op3: Fix brightness issue
-95b1346 op3: add a volte fix hax
-3d9c6d3 op3: Use QTI bluetooth stack
-9059315 op3: Use CAF bluetooth HAL
-207b7e3 op3: Use AOSP wifi HAL
-c3e9936 Fix build of our bluetooth header
-7054d7b Liquid
-86df7a6 op3: Disable CNE for now
-b1fd82c msm8996-common: Fix shared vdex name
-22c0765 op3: Disable telephony-ext for now
-122e3c2 op3: use vndk-27 android.hardware.gnss@1.0.so
-2ced957 op3: fix android.hardware.gnss@1.0-service-qti
+354420f op3: Update overlay from LA.UM.7.5.r1-03100-8x96.0
+246be10 op3: Update system properties from LA.UM.7.5.r1-03100-8x96.0
+b97daf4 op3: Set PRESENCE_CHECK_ALGORITHM to I_BLOCK instead of ISO_DEP_NAK
+00fdab1 op3: Update sec_config from LA.UM.7.5.r1-03100-8x96.0
+83eeca3 op3: Update qti_whitelist from LA.UM.7.5.r1-03100-8x96.0
+1df8dd0 op3: Bluetooth: Increase number of SEPs to support SHO/Mcast
+eca337d op3: Drop libbt-vendor
+cb1a8ff op3: Remove no longer needed Android Blueprints
+1645a90 op3: Remove hostapd configs
+8f58a5f op3: Remove unused vndk-sp
+a8769b4 op3: Update power profile for P
+e94033c Revert "CarrierConfig: Add Megafon and Beeline config"
+6f8dcad Configure number of physical SIM slots
 
-   * frameworks/base/
-867d64a base: Fix QS Styles
-1ef5bd2 base: Toggle to hide notch [1/2]
-0a16758 SystemUI: add volume tones and toggle back [1/2]
-bafb928 Add volume up/down tones back
-77d7939 CompassTile: Add a device supports compass check
-01df303 Reload Pixel Home Animation without reboot
-fb9fa5a Pixel Navbar animation toggle [1/2]
-efcd296 Speed up yet again Recents additional buttons delay
-0e41232 Speed up Recents show additional button delay
-6ec1396 Add Ambient Play QS tile
-e936f88 Add long click intents for QS tiles
-2f94245 base: move nlp combo config to custom
-8f0ce06 base: Fix CPU info overlay text layout
-5f9d92d base: Bring back CPU temperature to CPU info overlay
-5972eda Ambient Play: Various fixes
-b051996 Ambient Play: Allow to configure the scan interval [1/2].
-9aab9de Ambient Play: Make it also work while charging. Why not?
-d3936c4 Ambient Play: Hide AmbientIndication if Song and Artist are null.
-5abc0d2 Ambient Play: Workaround for Pie (allow cleartext traffic). Note: This is a quick hack, and doesn't comply with the current security standards.
-3f81125 Introduce Ambient Indication Interface
-325ab19 WifiDisplayController: handle preexisting p2p connection status
-329fb24 Default the network location provider to none
-625cdc0 combo issue when location reported by providers do not come with extras
-5323b85 Revert "SystemUI: use fp MODE_UNLOCK when pulsing or aod"
-51704ba NLP Combo feature
-ab07722 base: SettingsProvider: cleanup leftover logspill
-8b95a0e SystemUI: PoorManThemes: fix aod dash animation
-dc28886 base: SystemUI: rounded_ripple must use corner_size
-08ae9f3 base: bring back omni package utils
+=======================
+     11-06-2018
+=======================
 
-   * hardware/qcom/bt-caf/
-3267594 Merge pull request #1 from rrajesh011/fix
-ba0468c CFLAGS: -Wno-unused-variable and -Wno-unused-label
+
+   * hardware/qcom/display-caf/msm8996/
+2fc2283 hwc2: Dont build vendor.display.config with _vendor suffix
 
    * hardware/qcom/fm/
-b86603d jni: Resolve V4L2_CID_AUDIO_MUTE redefinitions
-6f80411 jni: Resolve FM_DEVICE_PATH R/O open flag
-422fa90 libfm_jni: use proper nativehelper headers
-ecd71ef fm/libfm_jni: Add -Wno-error
-76e682a Fix NativeHelper.h path
+3b8058f fm: Drop unnecessary dependencies
+
+   * system/core/
+c1a8800 Merge tag 'android-9.0.0_r16' of https://android.googlesource.com/platform//system/core into HEAD
+
+   * vendor/liquid/
+0883402 Revert "vendor: add round ui dimensions overlay"
+d5a6642 Revert "add rounded recents overlay"
+
+=======================
+     11-05-2018
+=======================
+
+
+   * hardware/qcom/display/
+ae340ef msm8084: Use generated kernel headers
+17eb67a msm8084: display: Don't use gnu-oldstyle field designators
+65f6d18 msm8084: Add additional build flags to avoid errors
+4350ca3 msm8084: Use libhwui.so instead of libskia.so
+fce1c70 msm8084: Include what we use.
+980c623 hwc: msm8084: Set ioprio for vsync thread
 
    * kernel/oneplus/msm8996/
-5275642 some battery and perf tweaks
-
-   * packages/apps/Launcher3/
-e891f62 add option to change icon size
-289e49a Avoid NullPointerException on non-feed devices.
-d46da61 Launcher3: Organize stuff on preferenceCategories
-0758c25 Option to hide/show labels on desktop & app-drawer
-e580437 Launcher3: Workaround the Icon pack issue on adaptive apps
-cff537d [Launcher3] Add iconpack support
-2eef619 Quickstep: feed integration support
-30e0d40 DeviceProfile: fix divide by zero
-05c72c2 Launcher3: Can't search out local app by Chinese
-f7bd9e3 logging: prevent NPE at logDeepShortcutsOpen
-0179e2a PagedView: fix pointer index out of range
-4fd86e3 Workspace: Allow resizing any widget
-a8fa7db Launcher3: allow to swipe down on recents view to clear all
-5f68476 Launcher3: use common style for recents task menu divider
-2343314 Launcher3: Add options to change grid sizes
-ea619c9 config: enable LAUNCHER3_PROMISE_APPS_IN_ALL_APPS
-e6a2f21 Settings: Hide Notification Dots on low RAM devices
-e8e3334 Provider: Initialize createEmptyRowOnFirstScreen without QSB
-dfa139e Launcher3: Stability NullPointer issue
-23e5058 Launcher3: No Calendarwidget 4x4 widget displayed
-752edb1 Disable QSB on first screen by default
-b56e752 Exclude from recents
-8c8c725 Increase to 5 rows on some device profiles
-b169d11 Launcher3: Add support for System themes
-da9161a Launcher3: use simple set wallapper chooser
-a21f5a3 Launcher3: allow non-developers to change icon shape
-7a3f036 Launcher3: Quickstep needs to rely on System rounded corner radius
-
-   * packages/apps/LiquidLounge/
-5792dfb lounge: Add a toggle to hide notch [2/2]
-b12b7c2 Pixel Navbar animation toggle [2/2]
-d56dda0 Add Ambient Play preference
-
-   * packages/apps/Settings/
-b031822 Settings: Update some stock drawables
-0eb1852 Settings: Add toggle for proximity wake
-728d7cb Add activities for QS tiles
-18b7a46 Ambient Play: Allow to configure the scan interval [2/2]
-f6e9cd4 Add preference for Ambient Play
-bf5608c Settings: add volume tone toggle back [2/2]
-0a2d33e Settings: Override doze packages
-3f15cc8 Introduce QS tile style picker [2/3]
-
-   * system/vold/
-141def6 Utils: Add missing exfat
-1c09e13 Switch pattern/PIN constants to match values in cryptfs.h
-
-   * vendor/liquid/
-1db99f0 add rounded recents overlay
-
-   * vendor/oneplus/
-9093be3 Merge pull request #1 from Destiny911gtr/pie
-538dfa4 Update graphics blobs from payton
-75adb29 oneplus3: Update vulkan blobs from LA.UM.7.2.r1-04000-sdm660.0
-c795c42 op3: Update ANT+ system blobs to P
-d90085e oneplus3: Include QTI Bluetooth blobs
-77eda3a nfc: fix path to firmware's lib
-8602296 Update ims.apk from whyred. HD icon removed
-62aac5d op3: use vndk-27 android.hardware.gnss@1.0.so
-d8b5b96 op3: nuke slim_daemon
+cbff85b rtnl: limit IFLA_NUM_TX_QUEUES and IFLA_NUM_RX_QUEUES to 4096
+9b18c19 media: af9035: prevent buffer overflow on write
+0eb0335 disable some warn/logs
+52f186e Makefile: Optimization AArch64/ARM
+4abb423 drivers: misc: qseecom: Micro optimization for module detection
+73ae22f mmc: core: slot-gpio: fix second SIM
+6e83ef1 Revert "cpufreq: hardlimit for min/max cpu frequencies"
+16d2d74 Revert "cpufreq: hardlimit for cpu governors"
+207007d Revert "hardlimit min freq"
+ccf1e77 msm8996: Overclocking frequencies
+5ebbfa3 Stable GPU Overclock @652Mhz
 
 =======================
-     10-19-2018
+     11-04-2018
 =======================
 
 
-   * frameworks/base/
-a0845c8 Camera: allow camera to use power key as shutter
-3f19a3c Bluetooth: Remove disconnect attempts to override the connections
-c7e7b7b Clear mDeferredHideWallpaper if wallpaper is being hidden
-bfe1c85 Remove the property of touch optimization check.
-42bac3a Check for null path in getInternalPathForUser
-b22bf11 Provide Synchronization to destroyUiAutomationService() to avoid Framework Reboot
-7503dc2 MSIM: Get network operator name of default data sub.
-21a9d22 NtpTrustedTime:Abstract forceSync and forceRefresh
-f834adf SystemUI: Fixed traffic icon show in SUB1 while sending MMS on SUB2
-e9f0b77 Avoid NPE in system server due to invalid Display
-40f5342 Process: Use audio-app cpuset if available
-6824db5 SystemUI: Fix NPE
-a3a577f SystemUI: Sort subscriptions for SPN
-94ca961 null check before accessing getCurrentScore()
-682a62d Update network score from NetworkAgent
-d2288fc Call DetectCountry only once per call
-4c8a3d2 Add ICCID into CarrierIdentifier
-e4dc32f Add config to disable CDMA call forward/waiting
-ff93b08 BT: Send info if call is CS type from telecomm service to BT apps.
-a4daac0 Telecom: Add support for call timer reset on CDMA MO call
-781b81c IMS: Propagate RTT capability of the called party to UI
-7f6f52b Use proper coded alphabet when a contact is written into EF_ADN of USIM.
-928b2d2 IMS: Conference URI support.
-6ce26b8 IMS: Add CALL_TYPE for audio and video inactive
-adb47a1 Pass correct parameters to API sendMultipartTextMessage
-23af9b9 IMS: Initialize provisioning status to unknown.
-d463568 Fix Possible Deadlock with getFeatureState
-b38d6d4 FR49835: ImsMultiEndPoint - Sip Notify Change
-64b3519 FR49835: ImsMultiEndPoint - Sip Notify Change
-675121d IMS: Support Robocall Feature For MT VOLTE Calls
-71d4b9a IMS: Support for Implicit Call Rejection
-7ceae27 IMS: Propagate call session property changed message
-d71aa8d Emergency SMS carrier config flag
-b16a91d IMS: Adding support for TIR/TIP permanent provisioning
-c2d79bf Avoid WiFi to Cellular silent redial when roaming
-c38cc11 Telephony: Add DisconnectCause values for clear code
-a389a58 SEEMP: framework instrumentation and AppProtect features
-3b4a7e2 IMS: Add flag to control reset UT capability
-cd9ff81 IMS: Add UT interface to query CF setting for service class.
-ae7208f SMS: Parsing of CDMA MMS notification carried by SMS
-d835abc Telephony: Add 7bit Ascii support for long message
-f6b7e9ba IMS-VT: Add config to control holding a video call
-80113c9 Telephony: Get SIM card capacity count of SMS
-12c3147 Telephony: Introduce a base class for ISMS.aidl.
-8cea0ec Themes: Expose QS background color
-
-   * frameworks/native/
-f2c8f37 Add vendor version for libgui
-0c91c14 Add vendor version for libgui
-
-   * frameworks/opt/net/ims/
-e92b1d0 Merge tag 'LA.UM.7.4.r1-03500-8x98.0' of https://source.codeaurora.org/quic/la/platform/frameworks/opt/net/ims into pie
-
-   * frameworks/opt/telephony/
-0444127 MSIM:Fix iccid issue during android upgrade.
-d28c160 DCTracker: fix loading of Oreo qti-telephony-common blob
-ec6871f DcTracker: Change access modifier of isNvSubscription to protected
-5c0c8fb PhoneFactory: fix creating a cdma phone type
-2d972ea Telephony: Enable NV based CDMA data call.
-e2550e4 MMS: Update apnProfileID for MMS only apn.
-3f34963 Fix signal icon is not shown
-9c9a0fb telephony: Fix loading of non Oreo-MR1 QTI blobs
-b604ac6 Merge tag 'LA.UM.7.4.r1-03500-8x98.0' of https://source.codeaurora.org/quic/la/platform/frameworks/opt/telephony into pie
-
-   * hardware/qcom/audio-caf/msm8996/
-adfa424 Merge tag 'LA.UM.7.6.r1-02800-89xx.0' into pie-caf-8996
-563570f Merge tag 'LA.UM.7.6.r1-02500-89xx.0' into pie-caf-8996
-
-   * hardware/qcom/bt-caf/
-b497832 Merge tag 'LA.UM.7.4.r1-03600-8x98.0' into pie-caf
-85c4ecb Merge tag 'LA.UM.7.4.r1-03500-8x98.0' into pie-caf
-0f408c6 Merge tag 'LA.UM.7.4.r1-03000-8x98.0' into pie-caf
-6118146 Don't build libbt-hidlclient for OSS builds
-01af54d Bluetooth: load btaddr from NV if QCOM_BT_USE_BTNV is set
-83cccc7 libbt-qcom: Allow building without proprietary bits
-
-   * hardware/qcom/wlan-caf/
-37728dc Merge tag 'LA.UM.7.4.r1-03500-8x98.0' into pie
-
-   * packages/apps/LiquidLounge/
-be55be4 lounge: Set default value for Force Expanded Notifications
-
-   * packages/services/Telecomm/
-5caea4e Break qti-telephony-framework dependency II
-ba1dbe2 Merge tag 'LA.UM.7.4.r1-03500-8x98.0' of https://source.codeaurora.org/quic/la/platform/packages/services/Telecomm into pie
-
-   * packages/services/Telephony/
-871cd05 PhoneCommon: Add description text item for each clear code
-695f6e1 IMS: Add support for STK CC feature
-4c894cd Quick solution for preferred_network_mode array
-da36459 Add permission to change WiFi hotspot settings
-77ec417 Unify calling account display and selection
-84dd759 Check before removing preference
-80bbe20 Break qti-telephony-framework dependency
-a1b84c1 TeleService: If you want to remove a pref you should set the key
-0660096 CallFeatureSettings: Only show video quality if QTI package installed
-de8ab44 Revert "Add support to launch call barring"
-3bb2045 Revert "XDivert changes for MSIM"
-d511fef Add some org.codeaurora.* to protected broadcasts
-c66ebad Merge tag 'LA.UM.7.4.r1-03500-8x98.0' of https://source.codeaurora.org/quic/la/platform/packages/services/Telephony into pie
-
-   * system/bt/
-a2f0ce4 bt: osi: undef PROPERTY_VALUE_MAX
-3c49b35 bt: osi: undef PROPERTY_VALUE_MAX
-
-   * vendor/codeaurora/telephony/
-a5f8c34 Merge tag 'LA.UM.7.4.r1-03500-8x98.0' of https://source.codeaurora.org/quic/la/platform/vendor/codeaurora/telephony into HEAD
-5cf5e3d Merge tag 'LA.UM.7.6.2.r1-03400-89xx.0' of https://source.codeaurora.org/quic/la/platform/vendor/codeaurora/telephony into HEAD
-
-   * vendor/liquid/
-6f63af5 soong: We follow lineage!
-0495b51 Fix Settings app expand arrow for P
-2050375 Introduce QS tile style picker [3/3]
-82c2074 Fruity Pebbles v2.0
-82f4c87 Volume UI updates
-93e8c04 Fix QS loading animation
-
-   * vendor/oneplus/
-6ff5ff0 sdm845-common: add 32bit libnl
-
-   * vendor/qcom/opensource/dataservices/
-5fd617a Merge tag 'LA.UM.7.4.r1-03500-8x98.0' into pie
+   * kernel/oneplus/msm8996/
+9e1c3ae Defconfig: update
+6e422e5 bcache: use routines from lib/crc64.c for CRC64 calculation
+f8fefc4 lib: add crc64 calculation routines
+7a6e652 arm64: mm: always enable CONFIG_HOLES_IN_ZONE
+ad36def ANDROID: scsi: ufs: add sysfs node to export health info
+58f64c5 ANDROID: qpnp: fg+smbcharger: implement Linux cycle count
+a490c8b disable frame pointer
+033abc0 PM / sleep: enable suspend-to-idle even without registered suspend_ops
+56e3a2f disable some error log for nfc crap
 
 =======================
-     10-18-2018
+     11-03-2018
 =======================
 
 
-   * frameworks/base/
-cb2845b Introduce QS tile style picker [1/3]
-d26c0be LiquidUtils: Import restart systemui api
-ce2795d Fruity Pebbles v2.0
-1232fde Make use of our Utils in fwb
-c1b4b39 Add a one time QS dialog for the theme tile
-f6db0d6 Introduce Theme tile
-c36a8eb Allow QS detail view to scroll
-e055d66 Add QSDetailItems
-7ac005a Clock: Fix crash in formatted string with date on right
-
-   * frameworks/opt/net/ims/
-7b59cf2 Fix editable roaming mode query bug
-
-   * packages/apps/LiquidLounge/
-754f9f7 lounge: Fix powermenu not showingup on lockscreen
-
-   * packages/apps/Settings/
-2f5aa87 Fruity Pebbles v2.0
-572cf53 Fix Battery settings FC
+   * vendor/qcom/opensource/audio/
+245fdbe Merge tag 'LA.UM.7.3.r1-06100-sdm845.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/audio into lineage-16.0
 
 =======================
-     10-17-2018
+     11-02-2018
 =======================
 
+
+   * hardware/qcom/audio-caf/msm8974/
+dee2005 audio: Use generated kernel headers
+
+   * hardware/qcom/audio-caf/msm8994/
+685eb19 audio: Use generated kernel headers
+804ef7e Use header lib instead of using global include path
+
+   * hardware/qcom/display-caf/msm8994/
+4bab834 display: Use generated kernel headers
+e52dd1e Use header lib instead of using global include path
+
+   * hardware/qcom/media-caf/msm8974/
+8067951 media: Use generated kernel headers
+
+   * hardware/qcom/media-caf/msm8994/
+64f46f7 media: Use generated kernel headers
+
+   * kernel/oneplus/msm8996/
+63ce72e remove duplicate function
+80b21298 msm: clock-osm: Use CLKFLAG_NO_RATE_CACHE for pwrcl and perfcl clk
+755c223 qcom-cpufreq: Use CLKFLAG_NO_RATE_CACHE
+547832d enable CONFIG_PM_DEBUG
+f6f4080 firmware: qcom: Remove debugfs dependency from tz-log driver
+39636ef crypto: msm: Don't bail out when debugfs creation fails
+2baeb00 power: reset: msm: Always perform a regular reboot upon panic
+be48e92 power: reset: msm: Don't use download mode by default
+49d2f51 cpufreq: Kill userspace CPU boosting entirely
+4b2d6fe msm: kgsl: Increase worker thread priority
+b70fb95 tweak high speed freq
+
+   * system/core/
+1b927a9 debuggerd: Resolve tombstoned missing O_CREAT mode
+
+=======================
+     11-01-2018
+=======================
+
+
+   * kernel/oneplus/msm8996/
+a914c99 bump version
+7b08335 qcacld-2.0: Update to CAF LA.UM.6.6.r1-10100-89xx.0
+6c6dd59 Merge tag 'LA.UM.6.6.r1-10100-89xx.0' into 8.1
+56fa0da enabled CONFIG_IP_NF_TARGET_TTL
+3a2a741 Revert "msm_thermal: enable early on boot"
+
+=======================
+     10-31-2018
+=======================
+
+
+   * device/qcom/sepolicy-legacy/
+fff950d legacy: Correctly label display.qservice
+
+   * kernel/oneplus/msm8996/
+456d105 Revert "thermal : intelli-Thermal v3.0"
+c1e4675 cpufreq: add latest alucard/darkness/nightmare governors
 
