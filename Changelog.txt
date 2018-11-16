@@ -1,16 +1,446 @@
 =======================
-     11-09-2018
+     11-15-2018
+=======================
+
+
+   * device/oneplus/oneplus3/
+8951b9b op3: Disable display blanking
+76736b2 DeviceParts: Return doze preference
+73c04fd Performances: move settings check into the ExecutorService and reduce settings provider calls
+fad722f CustomDoze: fix custom gestures not working if default pulsing is disabled [2/2]
+718335c Set LOCAL_SDK_VERSION where possible.
+7e59257 Ensure Doze respects RTL
+b431f60 Custom doze: use ExecutorService to handle sensor listener
+ea07ee9 Fix custom doze receiver protected broadcast logspam
+af75bb3 Custom doze service improvements
+5a6ec46 Allow to enable doze proximity actions without the notifications one
+3ace128 Change targeted sdk up to 27
+889d2cf Remove Doze dialog
+d2902bb Change package name for uniformity
+ca9b9ce Further Refactoring, change theme to match pixel (settings)
+e43d2f8 Clean up doze
+2d1ce48 Doze improvements
+1d4e4ac Refactoring for the OnePlus devices
+85f21d5 Remove summary for Doze
+c835bef ScreenType util from cmsdk
+5c7f3d5 Fix typo
+1b37335 Properly fix future timestamp error
+1988a1e Prevent a pm wakeup with a timestamp in the future
+98e6d25 Restore proximity wake preference on boot
+143c634 Add proximity wake
+0eeb138 Add back button to action bar
+bb540df Fix defaults
+7f90d38 Consolidate doze settings
+22481ba Set gesture to disabled by default
+a2d6005 Add service for using proximity sensor for wake-up
+a52169b vndk: Use a less spammy warning
+1d54e5a msm8996-common: Add libsutilscallstack to the vndk libraries
+98c5890 msm8996-common: Add libunwindstack to vndk-sp
+98d1d25 msm8996-common: Migrate to versioned VNDK layout
+6b47b4e msm8996-common: Disable vndk-sp creation for VNDK enabled targets
+27c8c72 msm8996-common: Add Mapper 2.1 to VNDK SP list
+cdb3d60 Make vr build with the VNDK
+2cbe3b1 CarrierConfig:Add carrier config to enable auto retry CFU after CSFB
+eedbde7 Devices should display the SPN for 2G/3G CMCC cards
+6c31320 Devices should display the SPN for CU card
+85cbb12 CarrierConfig:Add carrier config to set parse call forward number
+c6f27dc Add configuration for one operator
+13ccbc7 IMS: Adding carrier config for call deflection
+f75a201 IMS: Enable IMS feature flags for supported carriers
+4aa8bb4 IMS: update carrier_volte_tty_supported_bool to false
+179884d IMS: Add flag to control reset UT capability
+8a3cb37 Config: Retry SMS over IMS
+55b44c3 IMS: Hide VT call forward option for China operators
+7dc1929 Add overlay for ratchet_rat_families
+f1d5f3c Modify carrier_config attribute for CT carrier
+7176cb0 IMS: Add config for CMCC video CRBT(color ring back tone)
+854cdfa IMS: Add config to support cancel upgrade
+61cd6cd IMS: move timer based CFU config to CarrierConfig app
+8a0a1aa IMS: Enable IMS feature flags for supported carriers
+a7acb59 IMS-VT: Enable downgrade to voice for some operator.
+a83ec14 IMS: Add RTT downgrade configuration flag
+c318e59 IMS: Enable config flag for VoWiFi call quality
+2b32948 IMS: Configs for RTT feature
+b782e18 IMS: Add config flag for call deflection feature.
+b38a85b IMS: Enable config flag for VoWiFi call quality
+053ce7d IMS-VT: Add config that controls visibility of static Image UI
+a2f36b5 IMS: Configs for RTT feature
+eaca985 IMS-VT: Ignore mobile data change for VT calls for some operators.
+eb00e05 IMS: Add config to control 4G conference call
+5410cfd IMS-VT: Config changes for transmitting static image
+b585ef9 Add configuration of showing original dial string for MCCMNC 46003
+d1e4bee IMS-VT: Enable conference support for video calls.
+8006a49 IMS: Add config for VoLTE end to end enablement
+a45d30c IMS-VT: Add config flag for Video Quality selection
+9319b5e Hide IMS APN per operator's policy
+565e913 Add metered APN type for operators
+d8a620a IMS: Control display of Wifi calling mode preference
+c9c3dc5 Add hiding APN rule for some operators
+2c75c07 Update "show_apn_setting_cdma_bool" to true
+51a20a5 IMS-VT: Update configs to show/hide toast messages
+6292ae9 IMS-VT: Add support for configs to show/hide toast messages
+1f4654a Add config to skip reading the CLIR over Ut
+76fe2dd Mms: Turn on the flag to send mms via wifi
+3270af2 IMS-VT: Add support to read video call related config flags
+4f36481 Add config to show original dial string for CDMA MO call
+54a4c54 Add configuration flag to show message on dds switch
+47cc73a IMS-VT: Add config flags for removing modify call capability
+ad26ad9 Add new configuration flag for network type.
+055532e CarrierConfig: Record emergency calls for China carriers
+8c85e39 IMS-VT: Gaurd visibility of CS Retry UI option
+c953f91 IMS-VT: Add config flags for hiding preview during VT conference.
+9370ab3 Enable SPN override for CU and CMCC
+4fd80ed Config to display 14 digit IMEI
+987a374 IMS: Add support for Wifi calling mode preference
+b0cb430 IMS-VT: Add support for Low battery
+80208e5 IMS: Control display of Wifi calling mode preference
+bfa4495 Fix parsing XML with failure
+3bc76cd Preferred NW mode for Global CDMA Devices.
+3f064a1 Enable CDMA call fwd/waiting for CT
+6a00d38 Enable CallBarring over IMS
+a153a37 Add config to check data roaming for UT
+2203054 Add a config to enable MMS when mobile data is off
+8d5af4c Enable 7 bit ascii coding for long message
+0edd796 Enable device overlays compilation
+2abda6a Telephony: Add overlay for CarrierConfig.
+572a7fa Remove Carrier Config overlay, let's do this right!
+e54d6c5 Remove overlays and extract/setup scripts
+ab01864 op3: Cleaning up Impl tag
+079728c Remove ANT dependency
+50efacf Reserve 128MB for critical system components.
+de810ab oneplus3: light: Always apply RGB brightness scaling
+
+   * frameworks/base/
+61d86a7 CustomDoze: fix custom gestures not working if default pulsing is disabled [1/2]
+
+   * hardware/qcom/audio-caf/msm8952/
+f2dd859 mm-audio: Remove extraneous parantheses
+58a24f3 post_proc: Handle unused asphere function parameters
+efb7ea8 post_proc: Remove unused label
+34ad676 visualizer: Fix typedef redefinition
+
+=======================
+     11-14-2018
+=======================
+
+
+   * device/oneplus/oneplus3/
+a52169b vndk: Use a less spammy warning
+1d54e5a msm8996-common: Add libsutilscallstack to the vndk libraries
+98c5890 msm8996-common: Add libunwindstack to vndk-sp
+98d1d25 msm8996-common: Migrate to versioned VNDK layout
+6b47b4e msm8996-common: Disable vndk-sp creation for VNDK enabled targets
+27c8c72 msm8996-common: Add Mapper 2.1 to VNDK SP list
+cdb3d60 Make vr build with the VNDK
+2cbe3b1 CarrierConfig:Add carrier config to enable auto retry CFU after CSFB
+eedbde7 Devices should display the SPN for 2G/3G CMCC cards
+6c31320 Devices should display the SPN for CU card
+85cbb12 CarrierConfig:Add carrier config to set parse call forward number
+c6f27dc Add configuration for one operator
+13ccbc7 IMS: Adding carrier config for call deflection
+f75a201 IMS: Enable IMS feature flags for supported carriers
+4aa8bb4 IMS: update carrier_volte_tty_supported_bool to false
+179884d IMS: Add flag to control reset UT capability
+8a3cb37 Config: Retry SMS over IMS
+55b44c3 IMS: Hide VT call forward option for China operators
+7dc1929 Add overlay for ratchet_rat_families
+f1d5f3c Modify carrier_config attribute for CT carrier
+7176cb0 IMS: Add config for CMCC video CRBT(color ring back tone)
+854cdfa IMS: Add config to support cancel upgrade
+61cd6cd IMS: move timer based CFU config to CarrierConfig app
+8a0a1aa IMS: Enable IMS feature flags for supported carriers
+a7acb59 IMS-VT: Enable downgrade to voice for some operator.
+a83ec14 IMS: Add RTT downgrade configuration flag
+c318e59 IMS: Enable config flag for VoWiFi call quality
+2b32948 IMS: Configs for RTT feature
+b782e18 IMS: Add config flag for call deflection feature.
+b38a85b IMS: Enable config flag for VoWiFi call quality
+053ce7d IMS-VT: Add config that controls visibility of static Image UI
+a2f36b5 IMS: Configs for RTT feature
+eaca985 IMS-VT: Ignore mobile data change for VT calls for some operators.
+eb00e05 IMS: Add config to control 4G conference call
+5410cfd IMS-VT: Config changes for transmitting static image
+b585ef9 Add configuration of showing original dial string for MCCMNC 46003
+d1e4bee IMS-VT: Enable conference support for video calls.
+8006a49 IMS: Add config for VoLTE end to end enablement
+a45d30c IMS-VT: Add config flag for Video Quality selection
+9319b5e Hide IMS APN per operator's policy
+565e913 Add metered APN type for operators
+d8a620a IMS: Control display of Wifi calling mode preference
+c9c3dc5 Add hiding APN rule for some operators
+2c75c07 Update "show_apn_setting_cdma_bool" to true
+51a20a5 IMS-VT: Update configs to show/hide toast messages
+6292ae9 IMS-VT: Add support for configs to show/hide toast messages
+1f4654a Add config to skip reading the CLIR over Ut
+76fe2dd Mms: Turn on the flag to send mms via wifi
+3270af2 IMS-VT: Add support to read video call related config flags
+4f36481 Add config to show original dial string for CDMA MO call
+54a4c54 Add configuration flag to show message on dds switch
+47cc73a IMS-VT: Add config flags for removing modify call capability
+ad26ad9 Add new configuration flag for network type.
+055532e CarrierConfig: Record emergency calls for China carriers
+8c85e39 IMS-VT: Gaurd visibility of CS Retry UI option
+c953f91 IMS-VT: Add config flags for hiding preview during VT conference.
+9370ab3 Enable SPN override for CU and CMCC
+4fd80ed Config to display 14 digit IMEI
+987a374 IMS: Add support for Wifi calling mode preference
+b0cb430 IMS-VT: Add support for Low battery
+80208e5 IMS: Control display of Wifi calling mode preference
+bfa4495 Fix parsing XML with failure
+3bc76cd Preferred NW mode for Global CDMA Devices.
+3f064a1 Enable CDMA call fwd/waiting for CT
+6a00d38 Enable CallBarring over IMS
+a153a37 Add config to check data roaming for UT
+2203054 Add a config to enable MMS when mobile data is off
+8d5af4c Enable 7 bit ascii coding for long message
+0edd796 Enable device overlays compilation
+2abda6a Telephony: Add overlay for CarrierConfig.
+572a7fa Remove Carrier Config overlay, let's do this right!
+e54d6c5 Remove overlays and extract/setup scripts
+ab01864 op3: Cleaning up Impl tag
+079728c Remove ANT dependency
+50efacf Reserve 128MB for critical system components.
+de810ab oneplus3: light: Always apply RGB brightness scaling
+
+   * external/f2fs-tools/
+9195db0 Merge tag 'android-9.0.0_r16' into lineage-16.0-android-9.0.0_r16
+
+   * hardware/broadcom/wlan/
+7f14d25 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * hardware/qcom/audio-caf/msm8952/
+bbb5826 Visualizer: do not use GNU old-style field designators
+45351db voice_processing: do not use GNU old-style field designators
+
+   * hardware/qcom/audio/default/
+dd208e3 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * hardware/qcom/bootctrl/
+8afedbb Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * hardware/qcom/display/
+f1a7852 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * hardware/qcom/gps/
+90acec9 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * hardware/qcom/media/
+5a65b2f Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * packages/apps/Camera2/
+e9fce7b Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * packages/apps/Nfc/
+0b8f144 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * packages/providers/TelephonyProvider/
+5ba54eb Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * system/extras/
+dcc22d6 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * system/netd/
+20499b5 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+   * system/security/
+6e46041 Merge tag 'android-9.0.0_r16' into lineage-16.0
+
+=======================
+     11-13-2018
+=======================
+
+
+   * external/mksh/
+d793597 mksh: Build a static library
+
+   * frameworks/base/
+5f71aa5 Revert "Wallpaper is half black after rotating quickly"
+
+   * vendor/oneplus/
+1ee5131 op3: Update blobs from OOS 5.0.6
+9336619 sdm845-common: OOS 9.0.2 blobs
+
+=======================
+     11-13-2018
+=======================
+
+
+   * external/mksh/
+d793597 mksh: Build a static library
+
+   * frameworks/base/
+5f71aa5 Revert "Wallpaper is half black after rotating quickly"
+
+   * vendor/oneplus/
+1ee5131 op3: Update blobs from OOS 5.0.6
+9336619 sdm845-common: OOS 9.0.2 blobs
+
+=======================
+     11-12-2018
+=======================
+
+
+   * frameworks/base/
+3c942e1 GoogleAudio: update Pixel sounds from Pixel 2 Pie factory image
+
+=======================
+     11-11-2018
+=======================
+
+
+   * build/make/
+67d5f98 build: Introduce SubstratumHelperService
+
+   * frameworks/base/
+30b6a02 base: Fix Lockscreen clock values[1/2]
+4b645a0 Phone ringtone setting for Multi SIM device
+d4d843a Themes: Remove color spans when using config_useDarkBgNotificationIconTinting
+ae8319b Themes: Add Theme.DeviceDefault.Resolver.Exposed
+347a887 Themes: add bool to optimize notification icon colors on dark backgrounds
+b527d8f Themes: Expose notification icon colors
+ce62918 Themes: Set UserIcons tintMode to SRC_ATOP
+29da38e Themes: Expose QS tiles and label colors
+0f6fd90 Themes: SystemUI: expose screen pinning colors
+0f26c2a Themes: SystemUI: Expose QS edit item decoration background color
+d3f4665 Themes: Allow Permission Icons to be fully themed
+38dbd7a Themes: Allow Immersive cling colors to be fully themed
+1b2564a Themes: Expose resolver hardcoded colors
+5f17763 Themes: Expose toast & tooltip text colors for themes
+8e67eb4 Themes: Expose Keyguard affordance circle background
+754a2f0 Themes: Allow volume slider and thumb to work with custom images.
+60c36af Themes: Expose Screenshot flash and background colors
+bdb8d55 Themes: Expose Keyboard Shortcuts Dialog
+b60e902 Themes: graphics: ADB "N" icon compatible with OMS7
+42eb5f1 Themes: SystemUI: Expose switch bar title
+1e0081d Themes: Allow Navbar ripple color to be themed
+cd3a25d Fix current formating on lockscreen for devices, that report directly in Ampere. Shamelessly extracted from:   base: Lockscreen Charging info  (3/3)   by: xyyx <xyyx@mail.ru>
+9bffddf OMS: handle target or overlay package disabled
+d2ec68f9 OMS: try harder not to update assets if nothing changed
+1e5a056 SubstratumService: Rewrite installation method for Pie InstallSession API
+0985d21 Unbreak public api by hiding substratum interfaces
+a96bc59 Pie OMS: allow non-system overlays from Substratum
+78f5ec4 SubstratumService: Refactor & cleanup according to AOSP conventions
+005ac3b base: modify/define custom overlay management
+6228e45 SubstratumService: unify permissions
+db91569 SubstratumService: allow CHANGE_OVERLAY_PACKAGES permission
+5251d7b base: Introduce SubstratumService
+8ec1689 OMS: StrictMode and files under /data/system/theme/
+0689655 Hold "volume up" during boot to disable all overlays
+f9e2693 ThemeSafety: Introduce App Crash Intent
+679242c ApplicationsState: add filter for Substratum overlays [2/2]
+0914a6c Extras: Add dynamic theme sound effects support
+2986abb Extras: Add dynamic theme shutdown and boot animation support
+ffe2f8e wifi: Add settings to allow delay_disconnect if needed.
+a22c645 BatteryMeterView: Forced show percent in PowerSave
+af9b914 QS footer layout improvements
+9d7a712 Statusbar fix operator name
+84db2c6 BatteryMeterView: Fix glitch with percents
+1d132eb Decrease animation durations
+c0d3dca Add VOLTE icon toggle [1/2]
+c4ff358 base: catch what you cant explain
+8d8b63a KernelWakelockReader: stop the panic
+e77e4a3 DoubletapPowerForCamera disabled by default [2/2]
+2ce15c1 Allow dismiss notifications with FP left/right swipe [1/2]
+6ef2e8c Notifications: Publish binder service for lights
+75a1c83 Allow to set a full gesture navbar (swipe left for back action) [1/2]
+fba3a7d Framework: Remove some methods from boot image profile
+e0f64e8 Fix issue which exception happens with ExifInterface for HEIF content
+2590c02 Change caught exception in MediaScanner when ExifInterface is created
+3be230c ExifInterface: Avoid infinite loop on stream seeking failed
+4bc501c platform priv-app-permissions: update used development/tools/privapp_permissions/privapp_permissions.py script
+bfea75f Remove NotificationVisibility storage pool
+e29c539 Fix data source for HEIF exif extractor
+396119b Make all activities resizable
+8806dd6 StatusBarSignalPolicy: Why bro why
+3dbbf0e base: disable extra check for FLAG_WINDOW_IS_OBSCURED in adb auth
+c6b07ea Wallpaper is half black after rotating quickly
+dd960f8 Fix NPE in StatusBarSignalPolicy
+1f0db86 StatusBarSignalPolicy: Hide signal icons for disabled SIMs
+2ed6f42 Need to check empty not null for String
+ef49cbc Fix VOLTE icon color on Light statusbar
+5226ba0 Revert "base: SystemUI: fix tuner status bar icon blacklist"
+3351d9a Separate Notification & Ring Volume
+1b8fa6b storage: Set all sdcards to visible
+7d7e22f Prevent NFE in SystemUI when parsing invalid int
+cfed32d Allow screen unpinning on devices without navbar
+0fd3b0e Fix UsbDeviceManager null object reference
+90077a6 Dont RIP the lockscreen charging indication
+4c8e552 GnssLocationProvider to remember the Networks and connection types
+d6c7028 Add WIFI_COUNTRY_CODE_CHANGED_ACTION broadcast.
+bc195b1 Fix not-protected broadcast codeaurora.telecom.action.CALL_TYPE
+ca1390f Add VOLTE icon
+9e9f23c Cleanup brightness slider toggle [1/2]
+
+   * frameworks/opt/net/ims/
+a2ab38e Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * frameworks/opt/telephony/
+317494f Introduce TelephonyExtUtils
+334dcbd Handle CallFailCause ACCESS_CLASS_BLOCKED
+527ea2b Allow Emergency IMS network request in SIM less case
+8d23f1b Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * packages/apps/LiquidLounge/
+9266bc4 lounge: Fix Lockscreen clock values [2/2]
+9b0b013 Allow to suppress notifications sound/vibration if screen is On [2/2]
+78160f3 Add VOLTE icon toggle [2/2]
+060a423 Ambient : Hide AOD if config_dozeAlwaysOnDisplayAvailable is false
+715c115 Cleanup brightness slider toggle [2/2]
+
+   * packages/apps/Settings/
+420f975 Themes: Settings: Fix theming  zoom preview timestamp text color
+f31d6f4 Themes: Settings: expose msim color picker text colors
+feedd0b Themes: Settings: Expose storage summary text
+7c458c9 Themes: Settings: Expose storage icon colors
+b7dc6b4 Manage storage button is not showing in storage settings
+2fe1a4a Settings: Introduce Substratum changes.
+67ae32f Fix a crash when launching app detail for bad package name
+dfa6bc6 Move content later button doesn't work on Migration Wizard
+6e012a5 Fix pattern grid sizes
+56424f7 Fix Sim dialog
+d2dd564 DoubletapPowerForCamera disabled by default [1/2]
+a3f1dcd Allow dismiss notifications with FP left/right swipe [2/2]
+db31e12 Allow to set a full gesture navbar (swipe left for back action) [2/2]
+5e77fbf Tint suggestion icons to match system accent
+746b8ce Center the suggestion text and icon
+a4a0d4a settings: Remove IMEI explicit info
+8be7be1 fuelgauge: Display Portrait styled battery
+
+   * packages/services/Telecomm/
+db39cd9 Phone ringtone setting for Multi SIM device
+077a097 Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * packages/services/Telephony/
+2cc070d DisconnectCauseUtil: Sync with AOSP strings
+67ec1bc Merge tag 'android-9.0.0_r16' into pie-ims
+
+   * system/sepolicy/
+be65ce5 Add sdcard_posfix to the compatibility mapping
+9314eff Android.mk: Remove the inconsequential warning
+30676fd tee_listener isnt global
+a7d7740 p subs integration test
+f6ebd1c sepolicy: address denials related to recovery and first boot
+a2029e2 Implement sepolicy rules for substratum theming in p release
+4cc21da Introduce sepolicy exceptions for theme assets
+803aa6b sepolicy: fix neverallow
+1734f63 Initial sepolicy rules for substratum service
+
+   * vendor/codeaurora/telephony/
+8e32701 Revert "IMS-VT: Low battery handling for Video calls"
+
+   * vendor/liquid/
+0df61de Add Substratum Signature
+
+=======================
+     11-10-2018
 =======================
 
 
    * hardware/broadcom/libbt/
 f08b665 libbt: Make sure that we don't load pre-patch when looking for patch
 
-   * vendor/oneplus/
-c0eb52c op3: Update blobs from OOS 5.0.6
-
 =======================
-     11-08-2018
+     11-09-2018
 =======================
 
    * art/
@@ -27,11 +457,6 @@ ce7276d dex2oat: disable multithreading for WSL
 4731e9f Add detection for WSL
 e4f0e20 core_base: Remove libnfc_ndef from PRODUCT_PACKAGES
 9f8b53c Add PRODUCT_USE_LOGICAL_PARTITIONS
-
-   * device/oneplus/oneplus3/
-ef724d3 op3: Restore some pre-P system properties naming
-37307ca op3: extend unprocessed audio
-1edcd96 op3: Update microphone characteristics.
 
    * device/qcom/sepolicy/
 4a6635a sepolicy: Allow perf HAL to set freq props
@@ -51,14 +476,8 @@ b085db2 Merge tag 'android-9.0.0_r16' into pie-ims
 bf9e871 Merge tag 'android-9.0.0_r16' into pie
 967cac4 Add vendor version for libgui
 
-   * frameworks/opt/net/ims/
-ce2acd4 Merge tag 'android-9.0.0_r16' into pie-ims
-
    * frameworks/opt/net/wifi/
 4ae5b24 Merge tag 'android-9.0.0_r16' into pie
-
-   * frameworks/opt/telephony/
-e7f873e Merge tag 'android-9.0.0_r16' into pie-ims
 
    * frameworks/support/
 df8fb68 Merge tag 'android-9.0.0_r16' into pie
@@ -83,6 +502,9 @@ cf73ae0 Merge tag 'android-9.0.0_r16' into pie
 ca425b6 Allow call recording for Bulgaria.
 82e080c Allow call recording for Belgium
 b286b38 Allow call recording for Austria
+
+   * packages/apps/Jelly/
+f44d547 Jelly: Fix shortcut creation for websites without favicon
 
    * packages/apps/PackageInstaller/
 447cd9d Merge tag 'android-9.0.0_r16' into pie
@@ -112,14 +534,6 @@ fa189ce Merge tag 'android-9.0.0_r16' into pie
    * packages/providers/MediaProvider/
 7d5ad93 Merge tag 'android-9.0.0_r16' into pie
 eecab7c MediaProvider: Add read storage permission
-
-   * packages/services/Telecomm/
-90b4137 Merge tag 'android-9.0.0_r16' into pie-ims
-34ade89 Telecomm: Make sensitive phone numbers not to be shown in call log history.
-
-   * packages/services/Telephony/
-3a2db9c Revert "Revert "Add support to launch call barring""
-0785887 Merge tag 'android-9.0.0_r16' into pie-ims
 
    * system/bt/
 8e2ed37 Merge tag 'android-9.0.0_r16' into pie
@@ -153,7 +567,25 @@ ad753d2 apns: update RJIO APNs
 ac4e333 apns: NOS: fix tethering and mms.
 
    * vendor/oneplus/
-5459c93 sdm845-common: OOS 9.0.2 blobs
+ab0d98c msm8998: Update camera blobs
+2dc5e6f Revert "msm8998: Update camera blobs"
+5a6a652 msm8998: Update camera blobs
+94e4242 msm8998: Update sound trigger libs
+afc56ad msm8998: Update DRM blobs
+dd62442 msm8998: Add missing gfx blobs
+e276605 msm8998: Update audio libs
+07dc008 msm8998: Update adsp modules
+d25d189 msm8998: Update ipa firmware
+fceecd6 msm8998: Update graphics firmware
+c7479c7 msm8998: update blobs from ob17/ob19
+7be4a1a msm8998: Import perf stack from wahoo
+8508e16 msm8998: Update audio firmware
+b9f62fd msm8998: Update soundfx libs
+
+=======================
+     11-08-2018
+=======================
+
 
 =======================
      11-07-2018
@@ -161,30 +593,12 @@ ac4e333 apns: NOS: fix tethering and mms.
 
 
    * device/oneplus/oneplus3/
-354420f op3: Update overlay from LA.UM.7.5.r1-03100-8x96.0
-246be10 op3: Update system properties from LA.UM.7.5.r1-03100-8x96.0
-b97daf4 op3: Set PRESENCE_CHECK_ALGORITHM to I_BLOCK instead of ISO_DEP_NAK
-00fdab1 op3: Update sec_config from LA.UM.7.5.r1-03100-8x96.0
-83eeca3 op3: Update qti_whitelist from LA.UM.7.5.r1-03100-8x96.0
-1df8dd0 op3: Bluetooth: Increase number of SEPs to support SHO/Mcast
-eca337d op3: Drop libbt-vendor
-cb1a8ff op3: Remove no longer needed Android Blueprints
-1645a90 op3: Remove hostapd configs
-8f58a5f op3: Remove unused vndk-sp
 a8769b4 op3: Update power profile for P
 e94033c Revert "CarrierConfig: Add Megafon and Beeline config"
 6f8dcad Configure number of physical SIM slots
 
-=======================
-     11-06-2018
-=======================
-
-
    * hardware/qcom/display-caf/msm8996/
 2fc2283 hwc2: Dont build vendor.display.config with _vendor suffix
-
-   * hardware/qcom/fm/
-3b8058f fm: Drop unnecessary dependencies
 
    * system/core/
 c1a8800 Merge tag 'android-9.0.0_r16' of https://android.googlesource.com/platform//system/core into HEAD
@@ -193,115 +607,6 @@ c1a8800 Merge tag 'android-9.0.0_r16' of https://android.googlesource.com/platfo
 0883402 Revert "vendor: add round ui dimensions overlay"
 d5a6642 Revert "add rounded recents overlay"
 
-=======================
-     11-05-2018
-=======================
-
-
-   * hardware/qcom/display/
-ae340ef msm8084: Use generated kernel headers
-17eb67a msm8084: display: Don't use gnu-oldstyle field designators
-65f6d18 msm8084: Add additional build flags to avoid errors
-4350ca3 msm8084: Use libhwui.so instead of libskia.so
-fce1c70 msm8084: Include what we use.
-980c623 hwc: msm8084: Set ioprio for vsync thread
-
-   * kernel/oneplus/msm8996/
-cbff85b rtnl: limit IFLA_NUM_TX_QUEUES and IFLA_NUM_RX_QUEUES to 4096
-9b18c19 media: af9035: prevent buffer overflow on write
-0eb0335 disable some warn/logs
-52f186e Makefile: Optimization AArch64/ARM
-4abb423 drivers: misc: qseecom: Micro optimization for module detection
-73ae22f mmc: core: slot-gpio: fix second SIM
-6e83ef1 Revert "cpufreq: hardlimit for min/max cpu frequencies"
-16d2d74 Revert "cpufreq: hardlimit for cpu governors"
-207007d Revert "hardlimit min freq"
-ccf1e77 msm8996: Overclocking frequencies
-5ebbfa3 Stable GPU Overclock @652Mhz
-
-=======================
-     11-04-2018
-=======================
-
-
-   * kernel/oneplus/msm8996/
-9e1c3ae Defconfig: update
-6e422e5 bcache: use routines from lib/crc64.c for CRC64 calculation
-f8fefc4 lib: add crc64 calculation routines
-7a6e652 arm64: mm: always enable CONFIG_HOLES_IN_ZONE
-ad36def ANDROID: scsi: ufs: add sysfs node to export health info
-58f64c5 ANDROID: qpnp: fg+smbcharger: implement Linux cycle count
-a490c8b disable frame pointer
-033abc0 PM / sleep: enable suspend-to-idle even without registered suspend_ops
-56e3a2f disable some error log for nfc crap
-
-=======================
-     11-03-2018
-=======================
-
-
-   * vendor/qcom/opensource/audio/
-245fdbe Merge tag 'LA.UM.7.3.r1-06100-sdm845.0' of https://source.codeaurora.org/quic/la/platform/vendor/qcom-opensource/audio into lineage-16.0
-
-=======================
-     11-02-2018
-=======================
-
-
-   * hardware/qcom/audio-caf/msm8974/
-dee2005 audio: Use generated kernel headers
-
-   * hardware/qcom/audio-caf/msm8994/
-685eb19 audio: Use generated kernel headers
-804ef7e Use header lib instead of using global include path
-
-   * hardware/qcom/display-caf/msm8994/
-4bab834 display: Use generated kernel headers
-e52dd1e Use header lib instead of using global include path
-
-   * hardware/qcom/media-caf/msm8974/
-8067951 media: Use generated kernel headers
-
-   * hardware/qcom/media-caf/msm8994/
-64f46f7 media: Use generated kernel headers
-
-   * kernel/oneplus/msm8996/
-63ce72e remove duplicate function
-80b21298 msm: clock-osm: Use CLKFLAG_NO_RATE_CACHE for pwrcl and perfcl clk
-755c223 qcom-cpufreq: Use CLKFLAG_NO_RATE_CACHE
-547832d enable CONFIG_PM_DEBUG
-f6f4080 firmware: qcom: Remove debugfs dependency from tz-log driver
-39636ef crypto: msm: Don't bail out when debugfs creation fails
-2baeb00 power: reset: msm: Always perform a regular reboot upon panic
-be48e92 power: reset: msm: Don't use download mode by default
-49d2f51 cpufreq: Kill userspace CPU boosting entirely
-4b2d6fe msm: kgsl: Increase worker thread priority
-b70fb95 tweak high speed freq
-
-   * system/core/
-1b927a9 debuggerd: Resolve tombstoned missing O_CREAT mode
-
-=======================
-     11-01-2018
-=======================
-
-
-   * kernel/oneplus/msm8996/
-a914c99 bump version
-7b08335 qcacld-2.0: Update to CAF LA.UM.6.6.r1-10100-89xx.0
-6c6dd59 Merge tag 'LA.UM.6.6.r1-10100-89xx.0' into 8.1
-56fa0da enabled CONFIG_IP_NF_TARGET_TTL
-3a2a741 Revert "msm_thermal: enable early on boot"
-
-=======================
-     10-31-2018
-=======================
-
-
-   * device/qcom/sepolicy-legacy/
-fff950d legacy: Correctly label display.qservice
-
-   * kernel/oneplus/msm8996/
-456d105 Revert "thermal : intelli-Thermal v3.0"
-c1e4675 cpufreq: add latest alucard/darkness/nightmare governors
+   * vendor/oneplus/
+66f7250 msm8998: Replace perf stack
 
