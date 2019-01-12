@@ -1,256 +1,416 @@
 =======================
-     12-23-2018
+     01-11-2019
 =======================
 
 
    * device/oneplus/oneplus3/
-c88f5f4 Revert "op3: Switch to @mady51's kernel"
-0218b22 Revert "oneplus3: Remove msm-thermal, thermal-engine, and bcl"
-83c5729 Revert "oneplus3: Configure msm-thermal-simple driver"
-c0c816e Revert "Set maple for some kernel love"
-6c00486 Revert "Interactive: Update settings for better performance"
-5717b95 Revert "init.qcom.rc: set proper read-ahead"
+5893455 Revert "op3: Build IPACM"
 
 =======================
-     12-22-2018
+     01-10-2019
+=======================
+
+
+   * bootable/recovery/
+d405c57 Add runtime checks for A/B vs traditional updates
+8d894c6 Make adb use a custom prop for adb root
+5412e6d update_verifier: skip verity to determine successful on liquid builds
+0b18fcc recovery: updater: Fix SymlinkFn args
+277cbeb uncrypt: fix f2fs ioctl argument for pin_file
+7db24c1 f2fs: support f2fs by setting unmovable bit for package file
+41976d4 Revert "f2fs: support f2fs by setting unmovable bit for package file"
+
+   * build/make/
+328d602 Merge tag 'android-9.0.0_r30' into pie
+f5d7da0 Enable dynamic linker and hidden API warnings only on eng build
+
+   * build/soong/
+705ebb4 Stop using GCC in toolchain_library
+
+   * device/liquid/sepolicy/
+a02d4c2 common: Allow init to relabel I/O sched tuning nodes
+0467116 common: Expand labeling of sysfs_vibrator nodes using genfscon
+82cede1 selinux: add domain for Gallery
+95ad6fb common: Label and allow init to write to I/O sched tuning nodes
+02244c5 common: Allow adbd to set a system_prop
+
+   * device/oneplus/oneplus3/
+11763db op3: add kernel profiles
+32b2c09 op3: Enable Fast charging LED
+0156707 op3: Enable swipe up gesture
+
+   * device/qcom/sepolicy/
+6644a42 Merge remote-tracking branch 'lineage/lineage-16.0' into pie
+
+   * frameworks/av/
+c7ac4bb Merge tag 'android-9.0.0_r30' into pie
+
+   * frameworks/base/
+52bb781 Merge tag 'android-9.0.0_r30' into pie
+938918d SystemUI: fix doubletap2sleep on statusbar
+
+   * packages/apps/Contacts/
+6fc16aa Merge tag 'android-9.0.0_r30' into pie
+
+   * packages/apps/PackageInstaller/
+f42f93e Merge tag 'android-9.0.0_r30' into pie
+
+   * system/bt/
+9e997de Merge tag 'android-9.0.0_r30' into pie
+
+   * vendor/liquid/
+08f8dda Remove deprecated ro.device.cache_dir
+0e754b1 Don't explicitly build uneeded packages
+d3517a4 Disable art debug and enable minimize debug info
+2ad8686 soong_config: Add flag for msm8974 1440p EGL workaround
+
+   * vendor/oneplus/
+681fcb8 sdm845-common: add fajita to guard
+b1926ab op3: Kang qti performance libs from OP6
+3fd70c0 sdm845-common: update blobs (OB7)
+
+=======================
+     01-09-2019
+=======================
+
+
+   * device/qcom/sepolicy/
+a8d664b sepolicy: allow vold to read persist dirs
+84d55e5 sepolicy: Label mpctl_socket as data_file_type
+
+=======================
+     01-08-2019
 =======================
 
 
    * frameworks/base/
-f439a01 Fix Signature Spoofing
-34c94c7 KeyguardHostView: Auto face unlock v2 for pie
-e0bd232 FontService: Update privapp-permissions-platform.xml
-195088f base: FontService: Add a error for non-supported font packages
-4037aa4 telephony: Make IMS method updateToState accessible
-d196dfb DreamBackend: Fix launching settings
-e8c85ef systemui: fix liquid logo hide animation
-ac230c4 Update the screenState for keyguard while screen turning on
-00dda24 Delete the check of mService when BluetoothHeadset doUnbind
-75aeabc Make services with uid 1000 restart if their host process crashes
-bff0f3c ConnectionRecord: make SystemProcess Watchdog when clean app process
-341579f Change the listening logic of MtpStorageManager
-4a52eb5 Fix motion event offset of DecorView is moved in the window
-11739f0 BoostFramework: Add debug to hide logcat spam on devices without QPerformance
-4749d35 SystemUI: allow devices override audio panel location [1/2]
-f4e8752 extended audio panel [1/2]
-328965e Telephony: NPE observed in Settings when click on Search settings
-e0fecb0 Fix showing empty signal strength for TD-SCDMA
-f2b7291 Fix property setting with failure
-003f7c0 frameworks/base: Add HDMI hotplug handling
-ee22da8 Check if EIMS when confirming network
-0a6b86b net: modify connecitvity rematch logic to support MSIM devices
-3e2a7fe base: fix mediascanner access permissions to external storage
-e85bffa BoostFramework: silence exception about class not found
-a2dc426 Modify game detection logic
-956dbc5 Add perfGetFeedback api support from framework
-f51b2ce Re-Enable Burn-In Controllers for NavBar
-81d30b9 Fix Pie NavBar Full Gestures.
-1cfdaa3 Full nav gesture: Poor Hack to Get Everything working
-75ef7ce base: Keyguard: Hide check button when using PIN quick unlock
-d419474 Increase LongPress Timeout
-b1a0b82 Revert "aapt: Default to 0 compression ratio"
-1fdb3be Select the proper request list size
-d58e151 SystemUI: Fix IllegalArgumentException when SystemUI do dumping
-6bbdf14 Avoid NPE in resumeTopActivityInnerLocked()
-624cbd2 Fix Framework Reboot due to invalid display
-fb79b2f SystemUI: fix notification overlap with PIN screen
-3c9cec6 ResourceManager: Disable APK Assets cache
-c664718 BoostFramework: Implement asynchronous processing of perflocks
-ae88225 SmartNav: Update Kill App action
-30a8db8 PanelPorn 8.1: Power menu alpha and dim (1/2)
-25878d9 base: Add special captive portal servers for chinese
-27bfbe1 Support the perflock request from system/priv apps whose domain are untrusted
-9409d56 Add Game boost & modify launchboostv2 invocation.
-c1c6f5d Disable swipe boost and preferred apps for certain cases
-78521c0 Fling/Pre-fling Boost: Call perf boost from System Server context
-7db1bde BoostFramework: Clean up code
-670a9a1 IOP : Adding support for UXPerf Class
-15eb4f4 BoostFramework: Move property checks to pass sepolicy requirements.
-710ef44 IOP/UXE: This change is to enable the IOP and UXE
-4e07425 Precise new activity boost.
-682263c Reorder boosts for quick ramp up
-8cf0983 Add perf hint for screen rotation animation
-953c1a4 Add perf hint for rotation latency
-5f6df42 framework/base: add parallel verifyV1
-0a84a4e add perf_service into system_process.
-337f8c6 BoostFramework: To Enhance performance.
-9a33393 Lockscreen Visualizer: Check for keyguard fading away
-1305820 Fixes for lockscreen visualizer
-8d5e9ad Record screen in high quality
-c5f6b58 Battery charge warning [1/2]
-a682475 Add Option to Enable/Disable ScreenShot & ScreenRecord Shortcut [1/2]
-94f527b Clean up reloading assets on overlay change
-f683152 Notifications: Do not use theme context for remote views
-490203d Improvements in loading notifications with dark mode
-5dd5087 Reload more assets on overlay change
-7215124 Support for appending "standalone" WHERE chunks
-0d58255 Bind update() args as Object[] for performance
-7b80636 Extend SQLiteQueryBuilder for update and delete
-14f0805 Execute "strict" queries with extra parentheses
-f231540 Revert SQLiteQueryBuilder for now
-610e0c4 Execute "strict" queries with extra parentheses
-7ef5581 Add support for appending standalone phrases
-14636a0 GROUP BY and HAVING aren't ready to be strict
-e3170c9 Extend SQLiteQueryBuilder for update and delete
-2780e00 Revert "Frameworks/base: Compiled-classes support"
-a892993 Fix ExifInterface for .heic when meta is at the end
-d1a48fa LockscreenVisualizer: Use offload thread
-3c8ff78 FontService: fix null object reference
-fdb6277 Statusbar clock and icon fixes
-ac48126 CollapsedStatusbar: Fix phantom spaces in status bar
-9694f1e fwb: disable Aggressive trim settings by default
-48baab9 Smartbar pixel animation: Ability to customize the dots [1/3]
-17ba337 Smarbar Pixel Navbar Animation Duration Settings [1/3]
-f7bb133 Option to use accent color for pulse [2/3]
-09a8d5f Revert "Introduce Ambient Indication Interface"
-0119296 Revert "Ambient Play: Do nothing while we're offline."
+c651dfb [1/2] Ambient Visualizer
+a40a1a7 Always use standard small clock when pulsing on new notifications
+a903529 Ambient ticker: Set the text to fully white
+6262e37 base: fix signature spoofing and microg
+c689266 Display 'Dash charging' for dash charge in battery settings [1/2]
+b4f58a5 Ambient Display Music Ticker: Nuke song count info
+f13544b Ambient music / Now playing: show also on lockscreen
+ecb3f53 Ambient music: check if isMediaNotification after final inflation
+9d143c3 Ambient music ticker: make it work within Now Playing on Pixel devices [1/2]
+c453143 Full gesture navbar: fix swipe to back glitches
+b6464dc NFC tile: Make inactive drawable match other tiles
+cc44b29 Auto switch to a dark analog clock when using dark system theme
+1a162e1 Lockscreen clock styles: Fix bottom margins & ambient display/AOD visibility
+a1222b6 Lockscreen items/clocks: KeyguardSliceView improvements/cleanup
+d828e4a Lockscreen clock styles: Move everything to the keyguard [1/2]
+b19de35 Lockscreen/ambient analog clock: improve design
+c5e06e8 Ensure the clockview is aligned correctly each time
+f517d7c Remove the 0 from the 12 hour format from the 'Digital (bold)' option
+58e9751 Keyguard items: code improvements
+7d8c5d8 Introduce lockscreen clock/date styles [1/2]
+
+   * hardware/lineage/interfaces/
+7a01f1f livedisplay: Update FOSS status prop for Pie
+
+   * hardware/qcom/audio/default/
+dd4e0ad Merge tag 'android-9.0.0_r30' into lineage-16.0-android-9.0.0_r30
 
    * packages/apps/LiquidLounge/
-4e785b4 lounge: remove ambient now playing
+59ebe1c lounge: cleanup and organize gesture settings
+1f76c34 [2/2] Ambient Visualizer
+
+=======================
+     01-07-2019
+=======================
+
+
+   * device/qcom/sepolicy-legacy/
+d1f4846 sepolicy: Add additional restricted permissions to vendor_init
+
+   * frameworks/base/
+878bf8d Always keep clock/date & other items visible while dozing
+d9784af Hide lockscreen items [1/2]
+8a9134e Fix liquid logo overlap with clock
+c04e3d5 Fix system ui crash when pinning screen
+6568283 systemui: fixed advanced power menu option
+d8b9de6 PowerProfile: allow overriding default power profile
+54e4fea Enable Binder Proxy Tracking by Uid only on eng builds
+124f679 base: make settings_dark colors same as material_dark
+c014cab Brightness QS: more user options
+50785a7 Revert "Brightness slider changes"
+af3b43d Revert "Cleanup brightness slider toggle [1/2]"
+54bbc2d Network traffic: fix indicator not hiding on lost connection
+3b31940 Add button to AppErrorDialog to upload crash information to dogbin
+0e8d11b core: Fix switching fragment appears white screen
+5d127d7 SystemUI: Keyguard: Check for a null errString
+962874c Proximity check on wake fixes
+02cdac3 MTP: Add support of ObjectInfoChanged Event
+e6ec653 Revert "Change the listening logic of MtpStorageManager"
+9049e71 AMS: Fix the null pointer exception in MainHandler:handleMessage
+b072e2b AMS: Uncatch the IllegalStateException cause process crash
+8b02cd0 AMS: Fix the Deadlocks exception in UiHandler
+700cd4a AMS: Fix the null pointer exception in IntentResolver
+c3d658f hiddenapi: add crc32 intrinsic methods to light-greylist
+
+   * packages/apps/LiquidLounge/
+848c54f Introduce lockscreen clock/date styles [2/2]
+14c6ec6 Hide lockscreen items [2/2]
+fef6dd1 Add mido maintainer Not added by default? I am hurt :-(
+e950fdf lounge: update weather client detection
+46fc021 Brightness QS: more user options
 
    * packages/apps/Settings/
-d53bdec Revert "Add preference for Ambient Play"
-c336985 Revert "Ambient Play settings improvements"
-c9aaa77 Revert "AmbientPlay: Introduce history manager [4/4]"
-b32a9df Revert "Now Playing History MD2 redesign"
-be8b4ef Revert "Now playing history: Fix BG of entry dialog in Dark UI"
+bd675cb Display 'Dash charging' for dash charge in battery settings [2/2]
 
-   * packages/apps/SmartNavSettings/
-a7853a8 Merge pull request #1 from DouglasGomes123/pie
+   * system/update_engine/
+73e4f85 Android: Reset update progress when booted into new version.
+27ddc72 update_engine: Fallback to partition without suffix
 
    * vendor/liquid/
-ea7a0fb Revert "AmbientPlay: Introduce history manager [2/4]"
+0d2bc6d Add AmbientSensePrebuilt: it's used also by Google app/SoundSearch tile
 
 =======================
-     12-21-2018
+     01-06-2019
 =======================
 
 
-   * packages/apps/SmartNavSettings/
-1e6f672 Add translations pt-BR
+   * frameworks/base/
+efba87c StatusBar: corners: Fix dp evaluation
+015e9d7 ScreenDecorations: corners: Fixes for pie
+0a62cae StatusBar: Port in restore fw values to corner settings
+96a7667 Weather client: switch to vector drawables
+ea8199b Weather client: fix refresh at boot and improve/cleanup code [1/2]
+c35e6d4 base: Switch styles [1/3]
+779a72b base: Add OOS style switches
+6d5da90 base: QS themes [1/3]
+4396298 Ambient music ticker: don't trigger if it's not a media notification
+b11e614 Network traffic location [1/2]
+5945045 Network traffic: Fix text size for network traffic type
+0136866 Network traffic: Layout improvements
+6096010 Network traffic: fix static color usage
+330c748 Move net monitor to expanded statusbar header
+6b6ecd1 NetworkTraffic: Fix gravity
+ab1bb93 Avoid casting network traffic to StatusBarIconView to prevent crash
+a292325 Add network traffic monitor properly to statusbar icons
+764bd25 WeatherClient: don't check package availability on each location query
+ed2cb18 FontService: Disable logspam
+dbc87ed fonts: Build different fonts.xml if EXCLUDE_SERIF_FONTS is true
+d0cddca Systemui restart timeout causes black screen
+811ddfd Move register AppIdle listener into onBootPhase
+caceb3c Fix VideoView parsing some URIs failure issue
+1b189b9 InputEvent: Skip IME stages dynamically
+8d95177 No Safe Check for Overflowing Alarm Expiry time
+db65375 ViewRoot: Ensure we release surface from setWindowStopped
+fb09332 Weather client check: set interval to 20 minutes
+b89fb1e systemui: fix quick settings transparency
+207566d SoundSearchTile: Make default state inactive
+cb1ab5f Add Google Sound Search tile
+d1d0ca6 Ambient music: Use animated icon
+f17ce22 Ambient display music ticker [1/2]
+41f17e9 Port Ambient Now Playing container from Pixel
+6adbd76 base: Disable screen saver by default
+8a4cf03 base: SystemUI: tuner: fix hiding of statusbar clock
+adf3e8b Allow user to set screenrecord quality [1/2]
+8a6e9c8 FontService: Support fonts from Substratum theme packages
+892d362 FontService: Don't copy resources from /system/etc/fonts
+12eca24 Switching audio panel position [1/2]
+bedf796 Revert "SystemUI: allow devices override audio panel location [1/2]"
+10b1427 SystemUI: Use different drawables for notification volume
+a04c918 Fix the tint of the sliders in volume panel
+dfc063f Battery light: blend colors between full/empty [1/2]
+67118d8 BatteryLight: Full Charge Only, Fast Charge & Fast Charge Led colors [1/2]
+
+   * packages/apps/LiquidLounge/
+e68f13d Network traffic location [2/2]
+82052a5 Quick settings panel : Set transparency [2/2]
+4e1415e Ambient display music ticker [2/2]
+021aa70 Add Default USB Configuration
+f76725a Allow user to set screenrecord quality [2/2]
+10b5851 Switching audio panel position [2/2]
+fd6fadd Batterylight: blend colors between full/empty [2/2]
+2693d59 Add ColorBlendPreference from AICP
+1f299cd BatteryLight: Fast Charge & Fast Charge Led colors [2/2]
+560e25c [2/2] Lounge: op gesture tweaks
+
+   * packages/apps/Settings/
+1f78ad2 settings: QS themes [2/3]
+8642d8f RoundCorners: Add fw values corner preferences
+c34d23b settings: Switch styles [2/3]
+101a2e2 Settings: Automatic notification style [2/2]
+500de91 Add OnePlus dashboard icons [2/2]
+f1fb805 Restart SystemUI after UI style change
+b425796 settings: UI Styles [1/3]
+05ee437 Settings: Fix crash due to volume unlink preference
+eb5f63d deviceinfo: Move imei information to Sim status
+6c4451f Settings: clean SimPrefrenceDialog layout
+6a3e330 Settings: fix neverending progress on sim activation change
+2c6b2b8 Settings: no need to show a success alert dialog on sim switch
+bd30e3c Settings: adjust layout of fingerprint find sensor layout
+c41e4bf Settings: Allow devices to configure fingerprint sensor location
+
+   * system/update_engine/
+fce3e0c update_engine: Transition to backuptool domain
+
+   * vendor/liquid/
+5b10db2 vendor: increase build number (10.0.4)
 
 =======================
-     12-20-2018
+     01-05-2019
+=======================
+
+
+   * external/icu/
+7f4db1f Update Android ICU tzdata from 2018g to 2018i
+
+   * packages/apps/Settings/
+1d8dddc Add OnePlus dashboard icons [1/2]
+e0081cc Settings: Use MD2 icons for sliders to match the volume panel
+d7e9e33 Settings: Use correct icon for ring volume
+
+   * packages/resources/devicesettings/
+5a824fe Add strings for Ambient Display always on mode
+
+   * system/timezone/
+74c40ac Update Android tzdata from 2018g to 2018i
+
+   * vendor/liquid/
+7ab3ed1 soong_config: Add flag for crypto waiting on QSEE to start
+dd4ff05 soong_config: Add flag for legacy HW FDE
+5d10dfa liquid: qcom: Set proper CAF data-ipa-cfg-mgr pathmap
+9ec6ab8 vendor: Switch styles [3/3]
+882a598 vendor: Black theme fixes
+760a976 vendor: QS themes [3/3]
+0e1a396 vendor: Add 20SEVEN font
+036ba40 vendor: Add GBoard MD2 themes
+23cb2ae vendor: Remove light notification theme
+5996d98 Add OnePlus settings icon colors
+e4660a0 vendor: UI Styles [3/3]
+6c1f08a vendor: remove wifi display property overrides
+543308c liquid: qcom: Set data-ipa-cfg-mgr pathmap
+0fc48c8 soong_config: Add new flags for HW FDE
+
+=======================
+     01-04-2019
 =======================
 
 
    * build/make/
-39596df soong_config: Allow extension of valid gralloc 1.0 buffer usage bits
-de1b7d8 Revert "Build: Support for compiled-classes file"
-
-   * build/soong/
-3b8f983 Gralloc2: Allow invalid usage bits
+70687bd libart: change first boot dexopt to extract
+b085150 build: Support system-as-root A-only backuptool
 
    * frameworks/av/
-b62269e libmedia: Add 1440p camcorder quality
-8707895 mediascanner: Accept .opus file extension.
-f5f4023 libstagefright: Allow HFR-60 in HAL-3 recording
-cb21a7c stagefrightrecorder: don't modify timeOffset in surface source case
-4146509 Camera: Add support for manual 3A.
-8952e45 CamcorderProfiles: Add new camcorder profiles
-d4b551f libcameraservice: Don't pass NULL args on setCallbacks call
-bb4d19c CameraService: Fix deadlock in binder death cleanup.
-adade94 Camera: Skip stream size check for whitelisted apps.
-2de7efe Tuning of Binder buffer for various HALs
-5c11341 Audio: Set Deep Buffer flag for music stream.
-2a4d9af audiopolicy: reset capture state when input is closed
-ee7caa5 audio: add support to enable track offload using direct output
+53e10f6 MTP: Add support of ObjectInfoChanged Event
+3a8c1d1 audiopolicy: support extended feature in audiopolicymanager
+1d25df1 libcameraservice: force specific cam id for google face unlock
 
-   * frameworks/native/
-e36183a gralloc2: Extend the list of valid gralloc bits
-89ea6a5 Gralloc2: Mark some gralloc bits as valid
-f792978 sf: Add support for multiple displays
+   * frameworks/base/
+16f7157 Fix no default ringtone for slot2
+fa58801 telephony: Conditionally ignore RSSNR signal level
+b64a591 Revert "Improve a calculation method for LTE antenna reception level"
+cd89767 Reload assets on overlay change: code improvements
+0439425 Fix autofill save text
+5cb7182 base: Automatic notification style [1/2]
+04fff8f base: UI Styles [1/3]
+04ef0a3 [1/2] base: op gesture tweaks
+eb060ed BoostFramework: Add debug to hide logcat spam on devices without QPerfomance
+2394fa3 Revert "Need to check empty not null for String"
+fe37028 Allow fingerprint in Pocket mode
+c3f40ab core: Use darker shades for grey
+ee91953 systemui: fix liquid logo settings observer
+f4d1772 Revert "Statusbar clock and icon fixes"
+e649135 SystemUI: allow the power menu to be relocated
+ce40c77 SystemUI: Fix wrong SIM PIN message
+1ba2b54 Network traffic: skip more useless handler calls
+bf07ead Statusbar net monitor: stop the handler if screen is off
+5144de7 frameworks: base: Port password retention feature
+c93242d ConsumerIR: Support Huawei's DSP chip implementation
+621b98d Binder: Fix improper JNI call for dumpProxyDebugInfo
+
+   * hardware/interfaces/
+0d28934 Merge pull request #1 from rashedsahaji/p9.0
+
+   * hardware/lineage/interfaces/
+552a5f2 light: aw2013: Mark as shutdown critical
+
+   * hardware/qcom/audio-caf/msm8916/
+48ca4c0 post_proc: Mark unused variables as __unused
+
+   * hardware/qcom/data/ipacfg-mgr/
+5d43e1a ipacfg-mgr: Use    * pathmap
+
+   * packages/apps/DocumentsUI/
+40522bf DocumentsUI: Squash 12 bug fixes taken from bug tracker
+523b0bc DocumentsUI: Remove obsolete LOCAL_JACK_FLAGS
+24a33da Update few drawables [2/2]
+4388cad DocumentsUI: adaptive icon
+28c717b DocumentsUI: define appcategory
+e045b0d DocumentsUI: Make dark mode look a little better
+1aa8dad Add Pixel UI
+38f518d DocumentsUI: support night mode
+5230e70 Fix duplicate permission info on Adoptable storage
+0ca0620 Fix layout of dropdown_sort_widget
+51ebc15 Fix the other app's scoped directory permissions are revoked
+7c183c5 Fix crash when opening inspector screen of broken folder
+48e88ec Drop the task which already stopped in restoreTask
+43ef724 DocumentsUI: Open /sdcard instead of Downloads by default
+6d0b3d8 Fix force close when deleting files
+
+   * packages/apps/Launcher3/
+f0a32a9 Use LiquidUtils Fix compilation error
+6a715d2 Add Google search double tap option
+e4c80c1 Add Google ActionServices (MatchmakerPrebuilt) to blacklisted apps
+efa937d Fix Traslate pt-rBR
+988617f Add translation pt-rBR
 
    * packages/apps/LiquidLounge/
-dadd2b8 Hide notch for non-notch devices
-6e2d350 PanelPorn: Power menu alpha and dim (2/2)
-72cd734 Allow devices override audio panel location [2/2]
-f381427 extended audio panel [2/2]
-24b7c0d Remove doze dependancy
-24e1aec Add Option to Enable/Disable ScreenShot & ScreenRecord Shortcut [1/2]
-c7b46fd lounge: update gesture anywhere position
-2b95160 Fix network traffic type
+bec78e2 add submenu about, move OTA and matenedor [1/2]
+
+   * packages/apps/SecureElement/
+405f182 mAid can't be set to null for default selected application (C000).
 
    * packages/apps/Settings/
-8487eba Kang Build Date Info from ArrowOS
-eaa2334 Settings: Use correct icon for ring volume
-4f38829 show4GForLTE Fix
-c0b07a3 settings: fix liquid lounge logo size
-3a579a0 Battery charge warning [2/2]
-223d12c Revert "Cleanup ambient play history [2/3]"
-ef58197 Revert "settings: disable full nav gestures"
+9ae6547 Make LiquidRemix Build version text follow system accent
+ad5e049 add submenu about, move OTA and matenedor [2/2]
 
-   * packages/apps/SmartNav/
-9576db5 Navigator: Add Burn-In Controls Shift to public methods
-2eb96c1 Navigator: Add Gesture nav to public methods
-6cedc53 Pulse: Fix setting correct renderer color
-3156638 Smartbar pixel animation: Ability to customize the dots [2/3]
-98bb6db Make Smartbar Pixel Animation Durations Customizable [2/3]
-aee3926 SmartNav: Let's use System colors
-1e3ae55 DUI: Fix pulse opacity on CoverArtColor and Accent
-ff52564 Option to use accent color for pulse [1/3]
+   * packages/providers/WeatherProvider/
+1b6ab4f Weather client: fix refresh at boot and improve/cleanup code [2/2]
+c5d0013 Add gzip support
+336a655 Weather api: a few improvements
 
-   * packages/apps/SmartNavSettings/
-22d61f2 Add back the stock nav settings
-65d44f3 Option to use accent color for pulse [3/3]
-8c52dea Smartbar pixel animation: Ability to customize the dots [3/3]
-46ad53c Settings: Make Smartbar Pixel Animation Durations Customizable [3/3]
+   * system/bt/
+8cbd935 Bluetooth: Ensure to release wake lock during turn off
 
-   * system/core/
-ae708be core: Bring back custom charger percent text
-3369053 Allow adb root even in no debuggable builds
+   * system/vold/
+f33fa5e vold: Move QCOM HW FDE inclusion under Lineage namespace
+599d58e system: vold: Remove crypto block device creation
+5ffe28c vold: Add Hardware FDE feature
 
    * vendor/liquid/
-227b1b8 overlay: Define Google Assistant as default
-943e27c vendor: increase build number (10.0.3)
-7e57b66 Add support for VZW VoLTE and Wifi Calling
+2aa037b liquid: Support system-as-root A-only backuptool
+
+   * vendor/qcom/opensource/cryptfs_hw/
+9ce3ae9 cryptfs_hw: Fix build warnings
+bb6dfec cryptfs_hw: Featurize support for waiting on QSEE to start
+83ec2af cryptfs_hw: Add compatibility for pre-O hw crypto
+
+   * vendor/qcom/opensource/data-ipa-cfg-mgr/
+466df1f data-ipa-cfg-mgr: Disable NAT_DUMP on non-debug builds
+277cafc data-ipa-cfg-mgr: Disable all the debugging
+5463a59 data-ipa-cfg-mgr: Disable DEBUG for userdebug builds
+478c99e data-ipa-cfg-mgr: Remove verbose cflag
+7feab3e data-ipa-cfg-mgr: Don't build ipacm tests on debug builds
+4b7749b data-ipa-cfg-mgr: Use generated kernel headers
+b486557 data-ipa-cfg-mgr: Use    * pathmap
 
 =======================
-     12-19-2018
-=======================
-
-
-=======================
-     12-18-2018
-=======================
-
-
-=======================
-     12-17-2018
-=======================
-
-
-=======================
-     12-16-2018
+     01-03-2019
 =======================
 
 
-   * kernel/oneplus/msm8996/
-1fdbb60 do not call trace_printk on non-debug build
-607304d rcu: Print to trace on RCU stalls
+   * hardware/qcom/fm/
+1b22089 Merge tag 'LA.UM.7.3.r1-06600-sdm845.0' into HEAD
+
+   * hardware/qcom/wlan-caf/
+ea63a8b Merge tag 'LA.UM.7.3.r1-06600-sdm845.0' into HEAD
 
 =======================
-     12-15-2018
+     01-02-2019
 =======================
 
-
-=======================
-     12-14-2018
-=======================
-
-
-   * hardware/qcom/display/
-27adb24 msm8960/8974/8084: Include string.h where it is necessary
-be50591 msm8974: libexternal should depend on libmedia
-51eedfb msm8974: libgralloc: Fix adding offset to the mapped base address
-bd93363 msm8974: hwcomposer: Fix regression in hwc_sync
-50d9d00 msm8974: Move QCOM HALs to vendor partition
-adfacad msm8960: copybit: Fix type conversion error for GCC 4.7
-6015326 display: add TARGET_PROVIDES_LIBLIGHT
-156b61a Revert "msm8974: deprecate msm8974"
-
-   * hardware/qcom/media/
-2ea95b3 media: vdec: Include nativebase headers
-71efa19 mm-video: venc: Correct a typo in variable name
-6817d26 Revert "msm8974: remove from top level makefile"
 

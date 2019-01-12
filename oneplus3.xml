@@ -2,11 +2,11 @@
 <SlimOTA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ota.xsd">
     <Official>
         <oneplus3>
-            <Filename>liquid_remix-10.0.3-20181222-OFFICIAL-oneplus3.zip</Filename>
+            <Filename>liquid_remix-10.0.4-20190111-OFFICIAL-oneplus3.zip</Filename>
             <RomUrl
                 id="rom"
                 title="LiquidRemix"
-                description="Download latest build for oneplus3">https://sourceforge.net/projects/liquid-remix/files/oneplus3/liquid_remix-10.0.3-20181222-OFFICIAL-oneplus3.zip/download</RomUrl>
+                description="Download latest build for oneplus3">https://sourceforge.net/projects/liquid-remix/files/oneplus3/liquid_remix-10.0.4-20190111-OFFICIAL-oneplus3.zip/download</RomUrl>
             <ChangelogUrl
                 id="changelog"
                 title="Changelog"
